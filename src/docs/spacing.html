@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attributecss | spacing</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="demo-code-container">
+        <div class="demo" gap="16">
+          <div p="24" class="pattern-box">
+            <div size="64" class="demo-box">p="24"</div>
+          </div>
+          <div p="1rem" class="pattern-box">
+            <div size="64" class="demo-box">p="1rem"</div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html"><div p="24">p="24"</div></syntax-highlight>
+          <syntax-highlight language="html"><div p="1rem">p="1rem"</div></syntax-highlight>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script type="module">
+    import '../web-components/syntax-highlight.js';
+  </script>
+</html>

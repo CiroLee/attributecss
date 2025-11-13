@@ -1,0 +1,46 @@
+@layer components {
+  .pattern-box {
+    --line: #fbfff7;
+    --size: 10px;
+    background-image: repeating-linear-gradient(135deg, var(--line) 0, var(--line) 1px, transparent 0, transparent 50%);
+    background-size: var(--size) var(--size);
+    background-color: hsl(85 65% 62% / 0.8);
+    border-radius: 6px;
+  }
+  .demo-box {
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #348ff0;
+  }
+  .main-container {
+    max-width: 60%;
+    margin-inline: auto;
+    padding: 20px 0;
+  }
+  .demo-code-container {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    padding: 6px;
+    .demo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e4e4e4;
+      border-radius: 3px;
+      min-height: 160px;
+    }
+    .code {
+      margin-top: 6px;
+      display: block;
+      overflow: hidden;
+      border-radius: 3px;
+      box-shadow: 0 0 0 2px hsl(0deg 0% 80% / 38%);
+      padding: 12px;
+      background-color: #f8f8f8;
+    }
+  }
+}

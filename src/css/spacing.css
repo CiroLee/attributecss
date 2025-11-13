@@ -1,0 +1,49 @@
+/* margin */
+[m] {
+  --attr-m: attr(m px);
+  margin: var(--attr-m, attr(m type(*)));
+}
+[mx='auto'] {
+  margin-inline: auto;
+}
+[mx]:not([mx='auto']) {
+  --attr-mx: attr(mx px);
+  margin-left: var(--attr-mx, attr(mx type(*)));
+  margin-right: var(--attr-mx, attr(mx type(*)));
+}
+[my] {
+  --attr-my: attr(my px);
+  margin-top: var(--attr-my, attr(my type(*)));
+  margin-bottom: var(--attr-my, attr(my type(*)));
+}
+[ml] {
+  --attr-ml: attr(ml px);
+  margin-left: var(--attr-ml, attr(ml type(*)));
+}
+[mr] {
+  --attr-mr: attr(mr px);
+  margin-right: var(--attr-mr, attr(mr type(*)));
+}
+/* padding */
+[p] {
+  --attr-p: attr(p px);
+  padding: var(--attr-p, attr(p type(*)));
+}
+[py] {
+  --attr-py: attr(py px);
+  padding-top: var(--attr-py, attr(py type(*)));
+  padding-bottom: var(--attr-py, attr(py type(*)));
+}
+[px] {
+  --attr-px: attr(px px);
+  padding-left: var(--attr-px, attr(px type(*)));
+  padding-right: var(--attr-px, attr(px type(*)));
+}
+[pt] {
+  --attr-pt: attr(pt px);
+  padding-top: var(--attr-pt, attr(pt type(*)));
+}
+[pb] {
+  --attr-pb: attr(pb px);
+  padding-bottom: var(--attr-pb, attr(pb type(*)));
+}

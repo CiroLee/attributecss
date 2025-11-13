@@ -1,0 +1,11 @@
+/* colors: including background color, text color,border color, etc. */
+[bg-color] {
+  --attr-bg-color: attr(bg-color type(*));
+  background-color: var(--attr-bg-color);
+}
+[bg-alpha] {
+  background-color: color-mix(in oklab, var(--attr-bg-color) attr(bg-alpha %), transparent);
+}
+[color] {
+  color: attr(color type(*));
+}

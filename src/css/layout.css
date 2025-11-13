@@ -1,0 +1,24 @@
+[display] {
+  display: attr(display type(*));
+}
+[justify] {
+  justify-content: attr(justify type(*));
+}
+[items] {
+  align-items: attr(items type(*));
+}
+[gap-x] {
+  --attr-gap-x: attr(gap-x px);
+  column-gap: var(--attr-gap-x, attr(gap-x type(*)));
+}
+[gap-y] {
+  --attr-gap-y: attr(gap-y px);
+  row-gap: var(--attr-gap-y, attr(gap-y type(*)));
+}
+[gap] {
+  --attr-gap: attr(gap px);
+  gap: var(--attr-gap, attr(gap type(*)));
+}
+[flex-direction] {
+  flex-direction: attr(flex-direction type(*));
+}
