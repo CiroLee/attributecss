@@ -1,4 +1,3 @@
-/* colors: including background color, text color,border color, etc. */
 [bg-color] {
   --attr-bg-color: attr(bg-color type(*));
   background-color: var(--attr-bg-color);

@@ -8,18 +8,113 @@
   </head>
   <body>
     <div class="main-container">
+      <div text="14">SPACING</div>
+      <h2>padding</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Style</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>p=[&lt;number&gt;]</td>
+            <td>padding: calc(var(--spacing) * &lt;number&gt;)</td>
+          </tr>
+          <tr>
+            <td>p=[&lt;value&gt;]</td>
+            <td>padding: &lt;value&gt;</td>
+          </tr>
+          <tr>
+            <td>px=[&lt;number&gt;]</td>
+            <td>padding-inline: calc(var(--spacing) * &lt;number&gt;)</td>
+          </tr>
+          <tr>
+            <td>px=[&lt;value&gt;]</td>
+            <td>padding-inline: &lt;value&gt;</td>
+          </tr>
+          <tr>
+            <td>py=[&lt;number&gt;]</td>
+            <td>padding-block: calc(var(--spacing) * &lt;number&gt;)</td>
+          </tr>
+          <tr>
+            <td>py=[&lt;number&gt;]</td>
+            <td>padding-block: calc(var(--spacing) * &lt;number&gt;)</td>
+          </tr>
+          <tr>
+            <td>py=[&lt;value&gt;]</td>
+            <td>padding-block: &lt;value&gt;</td>
+          </tr>
+          <tr>
+            <td>pl=[&lt;number&gt;]</td>
+            <td>padding-left: calc(var(--spacing) * &lt;number&gt;)</td>
+          </tr>
+          <tr>
+            <td>pl=[&lt;value&gt;]</td>
+            <td>padding-left: &lt;value&gt;</td>
+          </tr>
+          <tr>
+            <td>pr=[&lt;number&gt;]</td>
+            <td>padding-right: calc(var(--spacing) * &lt;number&gt;)</td>
+          </tr>
+          <tr>
+            <td>pr=[&lt;value&gt;]</td>
+            <td>padding-right: &lt;value&gt;</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 mt="32">Basic usage</h3>
       <div class="demo-code-container">
         <div class="demo" gap="16">
-          <div p="24" class="pattern-box">
-            <div size="64" class="demo-box">p="24"</div>
+          <div p="4" class="pattern-box">
+            <div size="64" class="demo-box">p="4"</div>
           </div>
           <div p="1rem" class="pattern-box">
             <div size="64" class="demo-box">p="1rem"</div>
           </div>
         </div>
         <div class="code">
-          <syntax-highlight language="html"><div p="24">p="24"</div></syntax-highlight>
+          <syntax-highlight language="html"><div p="4">p="4"</div></syntax-highlight>
           <syntax-highlight language="html"><div p="1rem">p="1rem"</div></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="32">Add padding to one side</h3>
+      <div class="demo-code-container">
+        <div class="demo" gap="16">
+          <div pt="4" class="pattern-box">
+            <div size="64" class="demo-box">pt="4"</div>
+          </div>
+          <div pr="4" class="pattern-box">
+            <div size="64" class="demo-box">pr="4"</div>
+          </div>
+          <div pb="4" class="pattern-box">
+            <div size="64" class="demo-box">pb="4"</div>
+          </div>
+          <div pl="4" class="pattern-box">
+            <div size="64" class="demo-box">pl="4"</div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html"><div pt="4">pt="4"</div></syntax-highlight>
+          <syntax-highlight language="html"><div pr="4">pr="4"</div></syntax-highlight>
+          <syntax-highlight language="html"><div pb="4">pb="4"</div></syntax-highlight>
+          <syntax-highlight language="html"><div pl="4">pl="4"</div></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="32">Add vertical and horizontal padding</h3>
+      <div class="demo-code-container">
+        <div class="demo" gap="16">
+          <div px="4" class="pattern-box">
+            <div size="64" class="demo-box">px="4"</div>
+          </div>
+          <div py="4" class="pattern-box">
+            <div size="64" class="demo-box">py="4"</div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html"><div px="4">px="4"</div></syntax-highlight>
+          <syntax-highlight language="html"><div py="4">py="4"</div></syntax-highlight>
         </div>
       </div>
     </div>

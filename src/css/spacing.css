@@ -1,49 +1,62 @@
 /* margin */
 [m] {
-  --attr-m: attr(m px);
-  margin: var(--attr-m, attr(m type(*)));
+  --attr-m: calc(attr(m number) * var(--spacing));
+  margin: var(calc(var(--attr-m) * var(--spacing)), attr(m type(*)));
 }
 [mx='auto'] {
   margin-inline: auto;
 }
 [mx]:not([mx='auto']) {
-  --attr-mx: attr(mx px);
-  margin-left: var(--attr-mx, attr(mx type(*)));
-  margin-right: var(--attr-mx, attr(mx type(*)));
+  --attr-mx: calc(attr(mx number) * var(--spacing));
+  margin-inline: var(--attr-mx, attr(mx type(*)));
 }
 [my] {
-  --attr-my: attr(my px);
-  margin-top: var(--attr-my, attr(my type(*)));
-  margin-bottom: var(--attr-my, attr(my type(*)));
+  --attr-my: calc(attr(my number) * var(--spacing));
+  margin-block: var(--attr-my, attr(my type(*)));
 }
 [ml] {
-  --attr-ml: attr(ml px);
+  --attr-ml: calc(attr(ml number) * var(--spacing));
   margin-left: var(--attr-ml, attr(ml type(*)));
 }
 [mr] {
-  --attr-mr: attr(mr px);
+  --attr-mr: calc(attr(mr number) * var(--spacing));
   margin-right: var(--attr-mr, attr(mr type(*)));
 }
+[mt] {
+  --attr-mt: calc(attr(mt number) * var(--spacing));
+  margin-top: var(--attr-mt, attr(mt type(*)));
+}
+[mb] {
+  --attr-mb: calc(attr(mb number) * var(--spacing));
+  margin-bottom: var(--attr-mb, attr(mb type(*)));
+}
+
 /* padding */
 [p] {
-  --attr-p: attr(p px);
+  --attr-p: calc(attr(p number) * var(--spacing));
   padding: var(--attr-p, attr(p type(*)));
 }
 [py] {
-  --attr-py: attr(py px);
-  padding-top: var(--attr-py, attr(py type(*)));
-  padding-bottom: var(--attr-py, attr(py type(*)));
+  --attr-py: calc(attr(py number) * var(--spacing));
+  padding-block: var(--attr-py, attr(py type(*)));
 }
 [px] {
-  --attr-px: attr(px px);
-  padding-left: var(--attr-px, attr(px type(*)));
-  padding-right: var(--attr-px, attr(px type(*)));
+  --attr-px: calc(attr(px number) * var(--spacing));
+  padding-inline: var(--attr-px, attr(px type(*)));
 }
 [pt] {
-  --attr-pt: attr(pt px);
+  --attr-pt: calc(attr(pt number) * var(--spacing));
   padding-top: var(--attr-pt, attr(pt type(*)));
 }
 [pb] {
-  --attr-pb: attr(pb px);
+  --attr-pb: calc(attr(pb number) * var(--spacing));
   padding-bottom: var(--attr-pb, attr(pb type(*)));
+}
+[pl] {
+  --attr-pl: calc(attr(pl number) * var(--spacing));
+  padding-left: var(--attr-pl, attr(pl type(*)));
+}
+[pr] {
+  --attr-pr: calc(attr(pr number) * var(--spacing));
+  padding-right: var(--attr-pr, attr(pr type(*)));
 }

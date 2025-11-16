@@ -8,8 +8,16 @@
     "dev": "live-server src --port=3000 --no-browser",
     "build": "node build-css.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "css",
+    "atom css",
+    "attributecss",
+    "attribute"
+  ],
+  "author": {
+    "name": "CiroLee",
+    "email": "ciromail@126.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "live-server": "^1.2.2"
