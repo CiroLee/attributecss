@@ -18,6 +18,10 @@ class SyntaxHighlight extends HTMLElement {
 
     this.#render();
   }
+  set code(value) {
+    this.innerHTML = value;
+    this.#render(this.getAttribute('language'));
+  }
   #render() {
     let code = this.innerHTML;
     const html = hljs.highlight(code, { language: this.language }).value;

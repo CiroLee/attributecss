@@ -10,6 +10,15 @@
     &:hover {
       background-color: hsl(85 62% 50% / 0.8);
     }
+    &.margin {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: hsla(31, 65%, 62%, 0.8);
+      &:hover {
+        background-color: hsla(32, 62%, 50%, 0.8);
+      }
+    }
   }
   .demo-box {
     font-size: 14px;
@@ -23,6 +32,10 @@
     max-width: 54%;
     margin-inline: auto;
     padding: 20px 0;
+    @media (max-width: 640px) {
+      max-width: 100%;
+      padding: 20px 16px;
+    }
   }
   .demo-code-container {
     background-color: white;

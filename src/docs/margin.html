@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spacing | margin</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div text="14">SPACING</div>
+      <h2>margin</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Style</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>m=[&lt;number&gt;]</code></td>
+            <td><code>margin: calc(var(--spacing) * &lt;number&gt;)</code></td>
+          </tr>
+          <tr>
+            <td><code>m=[&lt;value&gt;]</code></td>
+            <td><code>margin: &lt;value&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>mx=[&lt;number&gt;]</code></td>
+            <td><code>margin-inline: calc(var(--spacing) * &lt;number&gt;)</code></td>
+          </tr>
+          <tr>
+            <td><code>mx=[&lt;value&gt;]</code></td>
+            <td><code>margin-inline: &lt;value&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>my=[&lt;number&gt;]</code></td>
+            <td><code>margin-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
+          </tr>
+          <tr>
+            <td><code>my=[&lt;value&gt;]</code></td>
+            <td><code>margin-block: &lt;value&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>ml=[&lt;number&gt;]</code></td>
+            <td><code>margin-left: calc(var(--spacing) * &lt;number&gt;)</code></td>
+          </tr>
+          <tr>
+            <td><code>ml=[&lt;value&gt;]</code></td>
+            <td><code>margin-left: &lt;value&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>mr=[&lt;number&gt;]</code></td>
+            <td><code>margin-right: calc(var(--spacing) * &lt;number&gt;)</code></td>
+          </tr>
+          <tr>
+            <td><code>mr=[&lt;value&gt;]</code></td>
+            <td><code>margin-right: &lt;value&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>space-x=[&lt;number&gt;]</code></td>
+            <td>
+              <code> & > :not(:last-child) { margin-inline-end: calc(var(--spacing) * &lt;number&gt;); } </code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>space-x=[&lt;number&gt;]</code></td>
+            <td>
+              <code> & > :not(:last-child) { margin-inline-end: &lt;value&gt;; } </code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>space-y=[&lt;number&gt;]</code></td>
+            <td>
+              <code> & > :not(:last-child) { margin-block-end: calc(var(--spacing) * &lt;number&gt;); } </code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>space-y=[&lt;value&gt;]</code></td>
+            <td>
+              <code> & > :not(:last-child) { margin-block-end: &lt;value&gt;; } </code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 mt="8">Basic usage</h3>
+      <div class="demo-code-container">
+        <div class="demo" gap="16">
+          <div size="24" class="pattern-box margin">
+            <div size="16" class="demo-box">m="4"</div>
+          </div>
+          <div size="24" class="pattern-box margin">
+            <div size="16" class="demo-box">m="1rem"</div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html"><div m="4">m="4"</div></syntax-highlight>
+          <syntax-highlight language="html"><div m="1rem">m="1rem"</div></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="8">Adding margin to one side</h3>
+      <div class="demo-code-container">
+        <div class="demo" gap="16">
+          <div h="20" items="end" class="pattern-box margin">
+            <div size="16" class="demo-box">mt="4"</div>
+          </div>
+          <div w="20" justify="start" class="pattern-box margin">
+            <div size="16" class="demo-box">mr="4"</div>
+          </div>
+          <div h="20" items="start" class="pattern-box margin">
+            <div size="16" class="demo-box">mb="4"</div>
+          </div>
+          <div w="20" justify="end" class="pattern-box margin">
+            <div size="16" class="demo-box">ml="4"</div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html"><div mt="4">mt="4"</div></syntax-highlight>
+          <syntax-highlight language="html"><div mr="4">mr="4"</div></syntax-highlight>
+          <syntax-highlight language="html"><div mb="4">mb="4"</div></syntax-highlight>
+          <syntax-highlight language="html"><div ml="4">ml="4"</div></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="8">Add vertical and horizontal padding</h3>
+      <div class="demo-code-container">
+        <div class="demo" gap="16">
+          <div w="24" class="pattern-box margin">
+            <div size="16" class="demo-box">mx="4"</div>
+          </div>
+          <div h="24" class="pattern-box margin">
+            <div size="16" class="demo-box">my="4"</div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html"><div mx="4">mx="4"</div></syntax-highlight>
+          <syntax-highlight language="html"><div my="4">my="4"</div></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="8">Add horizontal space between children</h3>
+      <div class="demo-code-container">
+        <div class="demo">
+          <div space-x="4" class="pattern-box margin">
+            <div size="16" class="demo-box">1</div>
+            <div size="16" class="demo-box">2</div>
+            <div size="16" class="demo-box">3</div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html" id="space-x-code"></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="8">Add vertical space between children</h3>
+      <div class="demo-code-container">
+        <div class="demo" min-h="80">
+          <div space-y="4" display="block" class="pattern-box margin">
+            <div size="16" class="demo-box">1</div>
+            <div size="16" class="demo-box">2</div>
+            <div size="16" class="demo-box">3</div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html" id="space-y-code"></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="8">Use custom space value between children</h3>
+      <div class="demo-code-container">
+        <div class="demo" min-h="80">
+          <div space-x="16px" class="pattern-box margin">
+            <div size="16" class="demo-box">1</div>
+            <div size="16" class="demo-box">2</div>
+            <div size="16" class="demo-box">3</div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html" id="custom-space-y-code"></syntax-highlight>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script type="module">
+    import '../components/syntax-highlight.js';
+    import { spaceXCode, spaceYCode, customSpaceXCode } from '../codes/margins.js';
+    const spaceXEl = document.getElementById('space-x-code');
+    const spaceYEl = document.getElementById('space-y-code');
+    const customSpaceYEl = document.getElementById('custom-space-y-code');
+    spaceXEl.code = spaceXCode;
+    spaceYEl.code = spaceYCode;
+    customSpaceYEl.code = customSpaceXCode;
+  </script>
+</html>

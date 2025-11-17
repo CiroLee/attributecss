@@ -1,12 +1,12 @@
 /* margin */
 [m] {
   --attr-m: calc(attr(m number) * var(--spacing));
-  margin: var(calc(var(--attr-m) * var(--spacing)), attr(m type(*)));
+  margin: var(--attr-m, attr(m type(*)));
 }
 [mx='auto'] {
   margin-inline: auto;
 }
-[mx]:not([mx='auto']) {
+[mx]:not([mx='auto'], [m='px']) {
   --attr-mx: calc(attr(mx number) * var(--spacing));
   margin-inline: var(--attr-mx, attr(mx type(*)));
 }
@@ -29,6 +29,20 @@
 [mb] {
   --attr-mb: calc(attr(mb number) * var(--spacing));
   margin-bottom: var(--attr-mb, attr(mb type(*)));
+}
+[space-x] {
+  --attr-calc-space-x: calc(attr(space-x number) * var(--spacing));
+  --attr-space-x: var(--attr-calc-space-x, attr(space-x type(*)));
+  & > :not(:last-child) {
+    margin-inline-end: var(--attr-space-x);
+  }
+}
+[space-y] {
+  --attr-calc-space-y: calc(attr(space-y number) * var(--spacing));
+  --attr-space-y: var(--attr-calc-space-y, attr(space-y type(*)));
+  & > :not(:last-child) {
+    margin-block-end: var(--attr-space-y);
+  }
 }
 
 /* padding */

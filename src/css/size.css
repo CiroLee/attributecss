@@ -5,23 +5,33 @@
   width: 100vw;
 }
 [w]:not([w='full'], [w='screen']) {
-  --attr-w: attr(w px);
+  --attr-w: calc(attr(w number) * var(--spacing));
   width: var(--attr-w, attr(w type(*)));
 }
-[h] {
-  --attr-h: attr(h px);
-  height: var(--attr-h, attr(h type(*)));
-}
 [max-w] {
-  --attr-max-w: attr(max-w px);
+  --attr-max-w: calc(attr(max-w number) * var(--spacing));
   max-width: var(--attr-max-w, attr(max-w type(*)));
 }
+[h='full'] {
+  height: 100%;
+}
+[h='screen'] {
+  height: 100vh;
+}
+[h]:not([h='full'], [h='screen']) {
+  --attr-h: calc(attr(h number) * var(--spacing));
+  height: var(--attr-h, attr(h type(*)));
+}
 [max-h] {
-  --attr-max-h: attr(max-h px);
+  --attr-max-h: calc(attr(max-h number) * var(--spacing));
   max-height: var(--attr-max-h, attr(max-h type(*)));
 }
+[min-h] {
+  --attr-min-h: calc(attr(min-h number) * var(--spacing));
+  min-height: var(--attr-min-h, attr(min-h type(*)));
+}
 [size] {
-  --attr-size: attr(size px);
+  --attr-size: calc(attr(size number) * var(--spacing));
   width: var(--attr-size, attr(size type(*)));
   height: var(--attr-size, attr(size type(*)));
 }
