@@ -2,7 +2,7 @@
   "name": "attributecss",
   "version": "0.0.1-alpha.1",
   "type": "module",
-  "description": "use css attr function to build a next atom css library",
+  "description": "use css attr function to build the next generation atom css framework",
   "main": "dist/attributecss.css",
   "scripts": {
     "dev": "live-server src --port=3000 --no-browser",
