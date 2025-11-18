@@ -8,17 +8,21 @@
   align-items: attr(items type(*));
 }
 [gap-x] {
-  --attr-gap-x: attr(gap-x px);
+  --attr-gap-x: calc(attr(gap-x number) * var(--spacing));
   column-gap: var(--attr-gap-x, attr(gap-x type(*)));
 }
 [gap-y] {
-  --attr-gap-y: attr(gap-y px);
+  --attr-gap-y: calc(attr(gap-y number) * var(--spacing));
   row-gap: var(--attr-gap-y, attr(gap-y type(*)));
 }
 [gap] {
-  --attr-gap: attr(gap px);
+  --attr-gap: calc(attr(gap number) * var(--spacing));
   gap: var(--attr-gap, attr(gap type(*)));
 }
 [flex-direction] {
   flex-direction: attr(flex-direction type(*));
+}
+[center='flex'] {
+  justify-content: center;
+  align-items: center;
 }

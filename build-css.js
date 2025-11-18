@@ -34,19 +34,22 @@ while ((match = importRegex.exec(entryContent)) !== null) {
 
 // 读取并处理每个导入的CSS文件
 let utilitiesCSS = '';
+const variableCSSContent = fs.readFileSync(path.join(cssDir, 'variable.css'), 'utf8');
 
-// 处理每个导入的CSS文件
+// 处理每个导入的CSS文件, 排除variable.css
 importedFiles.forEach((file) => {
-  const filePath = path.join(cssDir, file);
-  if (fs.existsSync(filePath)) {
-    const content = fs.readFileSync(filePath, 'utf8');
-    // 将每个CSS文件内容直接添加到统一的utilities层中
-    utilitiesCSS += content + '\n';
+  if (file !== 'variable.css') { // 排除variable.css
+    const filePath = path.join(cssDir, file);
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      // 将每个CSS文件内容直接添加到统一的utilities层中
+      utilitiesCSS += content + '\n';
+    }
   }
 });
 
-// 将所有内容包裹在@layer utilities中，并将:root声明放在外部
-const finalCSS = `:root {--spacing: 0.25rem}\n@layer utilities {\n${utilitiesCSS}\n}`;
+// 将所有内容包裹在@layer utilities中，并使用variable.css的内容
+const finalCSS = `${variableCSSContent}\n@layer utilities {\n${utilitiesCSS}\n}`;
 
 // 使用clean-css库压缩CSS
 const minifiedCSS = new CleanCSS({ level: 2 }).minify(finalCSS).styles;

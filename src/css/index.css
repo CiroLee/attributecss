@@ -1,9 +1,7 @@
+@import './variable.css';
 @import './border.css';
 @import './color.css';
 @import './layout.css';
 @import './size.css';
 @import './spacing.css';
 @import './typography.css';
-:root {
-  --spacing: 0.25rem;
-}

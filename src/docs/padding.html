@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>attributecss | spacing</title>
+    <title>spacing | padding - AttributeCSS</title>
     <link rel="stylesheet" href="../style/global.css" />
   </head>
-  <body>
+  <body class="gradient-bg">
     <div class="main-container">
       <div text="14">SPACING</div>
-      <h2>spacing | padding</h2>
+      <h2>padding</h2>
       <table class="table">
         <thead>
           <tr>
@@ -19,7 +19,7 @@
         </thead>
         <tbody>
           <tr>
-            <td><code>p=[&lt;number&gt;]</code></td>
+            <td><code>p=&lt;number&gt;</code></td>
             <td><code>padding: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -27,7 +27,7 @@
             <td><code>padding: &lt;value&gt;</code></td>
           </tr>
           <tr>
-            <td><code>px=[&lt;number&gt;]</code></td>
+            <td><code>px=&lt;number&gt;</code></td>
             <td><code>padding-inline: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -35,11 +35,11 @@
             <td><code>padding-inline: &lt;value&gt;</code></td>
           </tr>
           <tr>
-            <td><code>py=[&lt;number&gt;]</code></td>
+            <td><code>py=&lt;number&gt;</code></td>
             <td><code>padding-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
-            <td><code>py=[&lt;number&gt;]</code></td>
+            <td><code>py=&lt;number&gt;</code></td>
             <td><code>padding-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -47,7 +47,7 @@
             <td><code>padding-block: &lt;value&gt;</code></td>
           </tr>
           <tr>
-            <td><code>pl=[&lt;number&gt;]</code></td>
+            <td><code>pl=&lt;number&gt;</code></td>
             <td><code>padding-left: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -55,7 +55,7 @@
             <td><code>padding-left: &lt;value&gt;</code></td>
           </tr>
           <tr>
-            <td><code>pr=[&lt;number&gt;]</code></td>
+            <td><code>pr=&lt;number&gt;</code></td>
             <td><code>padding-right: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -66,7 +66,7 @@
       </table>
       <h3 mt="8">Basic usage</h3>
       <div class="demo-code-container">
-        <div class="demo" gap="16">
+        <div class="demo" gap="4">
           <div p="4" class="pattern-box">
             <div size="16" class="demo-box">p="4"</div>
           </div>
@@ -75,13 +75,12 @@
           </div>
         </div>
         <div class="code">
-          <syntax-highlight language="html"><div p="4">p="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div p="1rem">p="1rem"</div></syntax-highlight>
+          <syntax-highlight language="html" id="basic-use"><div p="4">p="4"</div></syntax-highlight>
         </div>
       </div>
       <h3 mt="8">Add padding to one side</h3>
       <div class="demo-code-container">
-        <div class="demo" gap="16">
+        <div class="demo" gap="4">
           <div pt="4" class="pattern-box">
             <div size="16" class="demo-box">pt="4"</div>
           </div>
@@ -96,15 +95,12 @@
           </div>
         </div>
         <div class="code">
-          <syntax-highlight language="html"><div pt="4">pt="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div pr="4">pr="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div pb="4">pb="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div pl="4">pl="4"</div></syntax-highlight>
+          <syntax-highlight language="html" id="one-side"></syntax-highlight>
         </div>
       </div>
       <h3 mt="8">Add vertical and horizontal padding</h3>
       <div class="demo-code-container">
-        <div class="demo" gap="16">
+        <div class="demo" gap="4">
           <div px="4" class="pattern-box">
             <div size="16" class="demo-box">px="4"</div>
           </div>
@@ -113,8 +109,7 @@
           </div>
         </div>
         <div class="code">
-          <syntax-highlight language="html"><div px="4">px="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div py="4">py="4"</div></syntax-highlight>
+          <syntax-highlight language="html" id="hv"></syntax-highlight>
         </div>
       </div>
     </div>
@@ -122,5 +117,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script type="module">
     import '../components/syntax-highlight.js';
+    import { baseUsageCode, oneSideCode, hvCode } from '../codes/padding.js';
+    const baseUseEl = document.getElementById('basic-use');
+    const oneSideEl = document.getElementById('one-side');
+    const hvEl = document.getElementById('hv');
+    baseUseEl.code = baseUsageCode;
+    oneSideEl.code = oneSideCode;
+    hvEl.code = hvCode;
   </script>
 </html>

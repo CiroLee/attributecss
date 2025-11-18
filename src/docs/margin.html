@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>spacing | margin</title>
+    <title>spacing | margin - AttributeCSS</title>
     <link rel="stylesheet" href="../style/global.css" />
   </head>
-  <body>
+  <body class="gradient-bg">
     <div class="main-container">
       <div text="14">SPACING</div>
       <h2>margin</h2>
@@ -19,7 +19,7 @@
         </thead>
         <tbody>
           <tr>
-            <td><code>m=[&lt;number&gt;]</code></td>
+            <td><code>m=&lt;number&gt;</code></td>
             <td><code>margin: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -27,7 +27,7 @@
             <td><code>margin: &lt;value&gt;</code></td>
           </tr>
           <tr>
-            <td><code>mx=[&lt;number&gt;]</code></td>
+            <td><code>mx=&lt;number&gt;</code></td>
             <td><code>margin-inline: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -35,7 +35,7 @@
             <td><code>margin-inline: &lt;value&gt;</code></td>
           </tr>
           <tr>
-            <td><code>my=[&lt;number&gt;]</code></td>
+            <td><code>my=&lt;number&gt;</code></td>
             <td><code>margin-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -43,7 +43,7 @@
             <td><code>margin-block: &lt;value&gt;</code></td>
           </tr>
           <tr>
-            <td><code>ml=[&lt;number&gt;]</code></td>
+            <td><code>ml=&lt;number&gt;</code></td>
             <td><code>margin-left: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -51,7 +51,7 @@
             <td><code>margin-left: &lt;value&gt;</code></td>
           </tr>
           <tr>
-            <td><code>mr=[&lt;number&gt;]</code></td>
+            <td><code>mr=&lt;number&gt;</code></td>
             <td><code>margin-right: calc(var(--spacing) * &lt;number&gt;)</code></td>
           </tr>
           <tr>
@@ -59,34 +59,46 @@
             <td><code>margin-right: &lt;value&gt;</code></td>
           </tr>
           <tr>
-            <td><code>space-x=[&lt;number&gt;]</code></td>
+            <td><code>space-x=&lt;number&gt;</code></td>
             <td>
               <code> & > :not(:last-child) { margin-inline-end: calc(var(--spacing) * &lt;number&gt;); } </code>
             </td>
           </tr>
           <tr>
-            <td><code>space-x=[&lt;number&gt;]</code></td>
+            <td><code>space-x=&lt;number&gt;</code></td>
             <td>
-              <code> & > :not(:last-child) { margin-inline-end: &lt;value&gt;; } </code>
+              <code>
+                & > :not(:last-child) { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;margin-inline-end: &lt;value&gt;; <br />
+                }
+              </code>
             </td>
           </tr>
           <tr>
-            <td><code>space-y=[&lt;number&gt;]</code></td>
+            <td><code>space-y=&lt;number&gt;</code></td>
             <td>
-              <code> & > :not(:last-child) { margin-block-end: calc(var(--spacing) * &lt;number&gt;); } </code>
+              <code>
+                & > :not(:last-child) { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;margin-block-end: calc(var(--spacing) * &lt;number&gt;); <br />
+                }
+              </code>
             </td>
           </tr>
           <tr>
             <td><code>space-y=[&lt;value&gt;]</code></td>
             <td>
-              <code> & > :not(:last-child) { margin-block-end: &lt;value&gt;; } </code>
+              <code
+                >& > :not(:last-child) { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;margin-block-end: &lt;value&gt;; <br />
+                }
+              </code>
             </td>
           </tr>
         </tbody>
       </table>
       <h3 mt="8">Basic usage</h3>
       <div class="demo-code-container">
-        <div class="demo" gap="16">
+        <div class="demo" gap="4">
           <div size="24" class="pattern-box margin">
             <div size="16" class="demo-box">m="4"</div>
           </div>
@@ -95,13 +107,12 @@
           </div>
         </div>
         <div class="code">
-          <syntax-highlight language="html"><div m="4">m="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div m="1rem">m="1rem"</div></syntax-highlight>
+          <syntax-highlight language="html" id="base-usage"></syntax-highlight>
         </div>
       </div>
       <h3 mt="8">Adding margin to one side</h3>
       <div class="demo-code-container">
-        <div class="demo" gap="16">
+        <div class="demo" gap="4">
           <div h="20" items="end" class="pattern-box margin">
             <div size="16" class="demo-box">mt="4"</div>
           </div>
@@ -116,15 +127,12 @@
           </div>
         </div>
         <div class="code">
-          <syntax-highlight language="html"><div mt="4">mt="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div mr="4">mr="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div mb="4">mb="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div ml="4">ml="4"</div></syntax-highlight>
+          <syntax-highlight language="html" id="one-side"></syntax-highlight>
         </div>
       </div>
       <h3 mt="8">Add vertical and horizontal padding</h3>
       <div class="demo-code-container">
-        <div class="demo" gap="16">
+        <div class="demo" gap="4">
           <div w="24" class="pattern-box margin">
             <div size="16" class="demo-box">mx="4"</div>
           </div>
@@ -133,8 +141,7 @@
           </div>
         </div>
         <div class="code">
-          <syntax-highlight language="html"><div mx="4">mx="4"</div></syntax-highlight>
-          <syntax-highlight language="html"><div my="4">my="4"</div></syntax-highlight>
+          <syntax-highlight language="html" id="hv"></syntax-highlight>
         </div>
       </div>
       <h3 mt="8">Add horizontal space between children</h3>
@@ -181,12 +188,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script type="module">
     import '../components/syntax-highlight.js';
-    import { spaceXCode, spaceYCode, customSpaceXCode } from '../codes/margins.js';
+    import { spaceXCode, spaceYCode, customSpaceXCode, baseUsageCode, oneSideCode, hvCode } from '../codes/margin.js';
+    const baseUsageEl = document.getElementById('base-usage');
+    const oneSideEl = document.getElementById('one-side');
     const spaceXEl = document.getElementById('space-x-code');
     const spaceYEl = document.getElementById('space-y-code');
     const customSpaceYEl = document.getElementById('custom-space-y-code');
+    const hvEl = document.getElementById('hv');
+    baseUsageEl.code = baseUsageCode;
+    oneSideEl.code = oneSideCode;
     spaceXEl.code = spaceXCode;
     spaceYEl.code = spaceYCode;
     customSpaceYEl.code = customSpaceXCode;
+    hvEl.code = hvCode;
   </script>
 </html>

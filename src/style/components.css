@@ -46,7 +46,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #e4e4e4;
+      background-color: #ebebeb;
       border-radius: 3px;
       min-height: 160px;
     }
@@ -60,6 +60,13 @@
       background-color: #f8f8f8;
     }
   }
+  .bar {
+    height: 30px;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--primary-color);
+    font-size: 14px;
+  }
   .table {
     width: 100%;
     table-layout: auto;
@@ -67,7 +74,7 @@
     border-radius: 8px;
     border-collapse: collapse;
     thead {
-      border-bottom: 1px solid #f2f2f2;
+      border-bottom: 1px solid #f1e3e3;
     }
     th {
       padding: 10px;
@@ -79,7 +86,7 @@
       font-size: 1rem;
     }
     tr:not(:last-child) {
-      border-bottom: 1px solid #f2f2f2;
+      border-bottom: 1px solid #f1e3e3;
     }
     tbody tr td:first-child {
       color: #348ff0;
