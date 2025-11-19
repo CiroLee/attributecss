@@ -1,0 +1,12 @@
+[translate] {
+  --attr-translate: calc(attr(translate number) * var(--spacing));
+  translate: var(--attr-translate, attr(translate type(*))) var(--attr-translate, attr(translate type(*)));
+}
+[translate-x] {
+  --attr-translate-x: calc(attr(translate-x number) * var(--spacing));
+  translate: var(--attr-translate-x, attr(translate-x type(*))) 0;
+}
+[translate-y] {
+  --attr-translate-y: calc(attr(translate-y number) * var(--spacing));
+  translate: 0 var(--attr-translate-y, attr(translate-y type(*)));
+}
