@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,10 +6,9 @@
     <title>size | width - AttributeCSS</title>
     <link rel="stylesheet" href="../style/global.css" />
   </head>
-
   <body class="gradient-bg">
     <div class="main-container">
-      <div text="14">SIZE</div>
+      <div font-size="14">SIZE</div>
       <h2>width</h2>
       <table class="table">
         <thead>
@@ -106,13 +105,13 @@
       <div class="demo-code-container">
         <div class="demo" py="6">
           <div space-y="4">
-            <div w="96" display="flex" center="flex" class="bar">w-96</div>
-            <div w="80" display="flex" center="flex" class="bar">w-80</div>
-            <div w="64" display="flex" center="flex" class="bar">w-64</div>
-            <div w="48" display="flex" center="flex" class="bar">w-48</div>
-            <div w="40" display="flex" center="flex" class="bar">w-40</div>
-            <div w="32" display="flex" center="flex" class="bar">w-40</div>
-            <div w="24" display="flex" center="flex" class="bar">w-24</div>
+            <div w="96" display="flex" center="flex" class="bar-h">w-96</div>
+            <div w="80" display="flex" center="flex" class="bar-h">w-80</div>
+            <div w="64" display="flex" center="flex" class="bar-h">w-64</div>
+            <div w="48" display="flex" center="flex" class="bar-h">w-48</div>
+            <div w="40" display="flex" center="flex" class="bar-h">w-40</div>
+            <div w="32" display="flex" center="flex" class="bar-h">w-40</div>
+            <div w="24" display="flex" center="flex" class="bar-h">w-24</div>
           </div>
         </div>
         <div class="code">
@@ -138,16 +137,47 @@
       <div class="demo-code-container">
         <div class="demo" py="8">
           <div w="20" class="pattern-box" py="4" translate-x="-8" space-y="2">
-            <div min-w="80" display="flex" center="flex" class="bar">min-w="80"</div>
-            <div min-w="64" display="flex" center="flex" class="bar">min-w="64"</div>
-            <div min-w="48" display="flex" center="flex" class="bar">min-w="48"</div>
-            <div min-w="40" display="flex" center="flex" class="bar">min-w="40"</div>
-            <div min-w="32" display="flex" center="flex" class="bar">min-w="32"</div>
-            <div min-w="24" display="flex" center="flex" class="bar">min-w="24"</div>
+            <div min-w="80" display="flex" center="flex" class="bar-h">min-w="80"</div>
+            <div min-w="64" display="flex" center="flex" class="bar-h">min-w="64"</div>
+            <div min-w="48" display="flex" center="flex" class="bar-h">min-w="48"</div>
+            <div min-w="40" display="flex" center="flex" class="bar-h">min-w="40"</div>
+            <div min-w="32" display="flex" center="flex" class="bar-h">min-w="32"</div>
+            <div min-w="24" display="flex" center="flex" class="bar-h">min-w="24"</div>
           </div>
         </div>
         <div class="code">
           <syntax-highlight language="html" id="min-width-code"></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="8">max-width</h3>
+      <div class="demo-code-container">
+        <div class="demo" py="8">
+          <div display="flex" gap="4" w="80%" flex-direction="column">
+            <div class="pattern-box">
+              <div max-w="96" display="flex" center="flex" class="bar-h">min-w="96"</div>
+            </div>
+            <div class="pattern-box">
+              <div max-w="80" display="flex" center="flex" class="bar-h">max-w="80"</div>
+            </div>
+            <div class="pattern-box">
+              <div max-w="64" display="flex" center="flex" class="bar-h">max-w="64"</div>
+            </div>
+            <div class="pattern-box">
+              <div max-w="48" display="flex" center="flex" class="bar-h">max-w="48"</div>
+            </div>
+            <div class="pattern-box">
+              <div max-w="40" display="flex" center="flex" class="bar-h">max-w="40"</div>
+            </div>
+            <div class="pattern-box">
+              <div max-w="32" display="flex" center="flex" class="bar-h">max-w="32"</div>
+            </div>
+            <div class="pattern-box">
+              <div max-w="24" display="flex" center="flex" class="bar-h">max-w="24"</div>
+            </div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html" id="max-width-code"></syntax-highlight>
         </div>
       </div>
     </div>
@@ -155,12 +185,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script type="module">
     import '../components/syntax-highlight.js';
-    import { widthBasicCode, sizeCode, minWidthCode } from '../codes/width.js';
+    import { widthBasicCode, sizeCode, minWidthCode, maxWidthCode } from '../codes/width.js';
     const widthBasicCodeEl = document.getElementById('width-basic-code');
     const sizeCodeEl = document.getElementById('width-size-code');
     const minWidthCodeEl = document.getElementById('min-width-code');
+    const maxWidthCodeEl = document.getElementById('max-width-code');
     widthBasicCodeEl.code = widthBasicCode;
     sizeCodeEl.code = sizeCode;
     minWidthCodeEl.code = minWidthCode;
+    maxWidthCodeEl.code = maxWidthCode;
   </script>
 </html>

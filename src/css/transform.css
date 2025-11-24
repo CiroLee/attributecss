@@ -10,3 +10,7 @@
   --attr-translate-y: calc(attr(translate-y number) * var(--spacing));
   translate: 0 var(--attr-translate-y, attr(translate-y type(*)));
 }
+[rotate] {
+  --attr-rotate: calc(attr(rotate number) * 1deg);
+  rotate: var(--attr-rotate, attr(rotate type(*)));
+}

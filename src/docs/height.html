@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>size | width - AttributeCSS</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body class="gradient-bg">
+    <div class="main-container">
+      <div font-size="14">SIZE</div>
+      <h2>height</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Style</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>h="full"</code></td>
+            <td><code>height: 100%</code></td>
+          </tr>
+          <tr>
+            <td><code>h="screen"</code></td>
+            <td><code>height: 100vh</code></td>
+          </tr>
+          <tr>
+            <td><code>h="fit"</code></td>
+            <td><code>height: fit-content</code></td>
+          </tr>
+          <tr>
+            <td><code>h=&lt;number&gt;</code></td>
+            <td><code>height: calc(var(--spacing) * &lt;number&gt;)</code></td>
+          </tr>
+          <tr>
+            <td><code>h=[&lt;value&gt;]</code></td>
+            <td><code>height: &lt;value&gt;</code></td>
+          </tr>
+
+          <tr>
+            <td><code>max-h=&lt;number&gt;</code></td>
+            <td><code>max-height: calc(var(--spacing) * &lt;number&gt;)</code></td>
+          </tr>
+          <tr>
+            <td><code>max-h=[&lt;value&gt;]</code></td>
+            <td><code>max-height: &lt;value&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>min-h=&lt;number&gt;</code></td>
+            <td><code>min-height: calc(var(--spacing) * &lt;number&gt;)</code></td>
+          </tr>
+          <tr>
+            <td><code>min-h=[&lt;value&gt;]</code></td>
+            <td><code>min-height: &lt;value&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>size="full"</code></td>
+            <td>
+              <code>
+                width: 100% <br />
+                height: 100%
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>size="screen"</code></td>
+            <td>
+              <code>
+                width: 100vw <br />
+                height: 100vh
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>size="fit"</code></td>
+            <td>
+              <code>
+                width: fit-content <br />
+                height: fit-content
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>size=&lt;number&gt;</code></td>
+            <td>
+              <code>
+                width: calc(var(--spacing) * &lt;number&gt;) <br />
+                height: calc(var(--spacing) * &lt;number&gt;)
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>size=[&lt;value&gt;]</code></td>
+            <td>
+              <code>
+                width: &lt;value&gt; <br />
+                height: &lt;value&gt;
+              </code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 mt="8">Basic usage</h3>
+      <div class="demo-code-container">
+        <div class="demo" py="6">
+          <div display="flex" items="end" gap="4">
+            <div h="96" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-96</div></div>
+            <div h="80" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-80</div></div>
+            <div h="64" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-64</div></div>
+            <div h="48" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-48</div></div>
+            <div h="40" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-40</div></div>
+            <div h="32" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-32</div></div>
+            <div h="24" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-24</div></div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html" id="height-basic-code"></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="8">min-height</h3>
+      <div class="demo-code-container">
+        <div class="demo" py="8">
+          <div h="96" display="flex" items="end">
+            <div h="20" class="pattern-box" display="flex" gap="4" px="4">
+              <div min-h="96" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="96"</div></div>
+              <div min-h="80" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="80"</div></div>
+              <div min-h="64" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="64"</div></div>
+              <div min-h="48" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="48"</div></div>
+              <div min-h="40" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="40"</div></div>
+              <div min-h="32" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="32"</div></div>
+              <div min-h="24" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="24"</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html" id="min-height-code"></syntax-highlight>
+        </div>
+      </div>
+      <h3 mt="8">max-height</h3>
+      <div class="demo-code-container">
+        <div class="demo" py="8" gap="4">
+          <div class="pattern-box" h="100" display="flex">
+            <div class="bar-v" h="full" max-h="96" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="96"</div></div>
+          </div>
+          <div class="pattern-box" h="100" display="flex">
+            <div class="bar-v" h="full" max-h="80" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="80"</div></div>
+          </div>
+          <div class="pattern-box" h="100" display="flex">
+            <div class="bar-v" h="full" max-h="64" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="64"</div></div>
+          </div>
+          <div class="pattern-box" h="100" display="flex">
+            <div class="bar-v" h="full" max-h="48" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="48"</div></div>
+          </div>
+          <div class="pattern-box" h="100" display="flex">
+            <div class="bar-v" h="full" max-h="40" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="40"</div></div>
+          </div>
+          <div class="pattern-box" h="100" display="flex">
+            <div class="bar-v" h="full" max-h="32" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="32"</div></div>
+          </div>
+          <div class="pattern-box" h="100" display="flex">
+            <div class="bar-v" h="full" max-h="24" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="24"</div></div>
+          </div>
+        </div>
+        <div class="code">
+          <syntax-highlight language="html" id="max-height-code"></syntax-highlight>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script type="module">
+    import '../components/syntax-highlight.js';
+    import { heightBasicCode, minHeightCode, maxHeightCode } from '../codes/height.js';
+    const heightBasicCodeEl = document.getElementById('height-basic-code');
+    const minHeightCodeEl = document.getElementById('min-height-code');
+    const maxHeightCodeEl = document.getElementById('max-height-code');
+    maxHeightCodeEl.code = maxHeightCode;
+    heightBasicCodeEl.code = heightBasicCode;
+    minHeightCodeEl.code = minHeightCode;
+  </script>
+</html>

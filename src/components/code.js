@@ -16,9 +16,9 @@ class UICode extends HTMLElement {
           height: 22px;
           padding: 0 6px;
           border-radius: 4px;
-          border: 1px solid #c4c4c4;
+          border: 1px solid hsl(0deg 0% 76% / 64%);
           box-sizing: border-box;
-          background-color: #f2f2f2;
+          background-color: hsl(0deg 0% 100% / 48%);
         }
       </style>
       <code class="code"><slot></slot></code>

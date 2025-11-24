@@ -1,0 +1,35 @@
+/* flex */
+[justify] {
+  justify-content: attr(justify type(*));
+}
+[items] {
+  align-items: attr(items type(*));
+}
+[items-self] {
+  align-self: attr(items-self type(*));
+}
+[flex-direction] {
+  flex-direction: attr(flex-direction type(*));
+}
+[center='flex'] {
+  justify-content: center;
+  align-items: center;
+}
+/* gap */
+[gap-x] {
+  --attr-gap-x: calc(attr(gap-x number) * var(--spacing));
+  column-gap: var(--attr-gap-x, attr(gap-x type(*)));
+}
+[gap-y] {
+  --attr-gap-y: calc(attr(gap-y number) * var(--spacing));
+  row-gap: var(--attr-gap-y, attr(gap-y type(*)));
+}
+[gap] {
+  --attr-gap: calc(attr(gap number) * var(--spacing));
+  gap: var(--attr-gap, attr(gap type(*)));
+}
+/* grid */
+[grid-cols] {
+  --attr-grid-cols: attr(grid-cols number);
+  grid-template-columns: if(style(var(--attr-grid-cols, 0) > 0): repeat(var(--attr-grid-cols), minmax(0, 1fr)) ; else: attr(grid-cols type(*)));
+}

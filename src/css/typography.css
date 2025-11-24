@@ -1,7 +1,7 @@
 /* font-size */
-[text] {
-  --attr-text: attr(text px);
-  font-size: var(--attr-text, attr(text type(*)));
+[font-size] {
+  --attr-font-size: attr(font-size px);
+  font-size: var(--attr-font-size, attr(font-size type(*)));
 }
 /* font-weight */
 [weight] {
@@ -9,4 +9,8 @@
 }
 [text-align] {
   text-align: attr(text-align type(*));
+}
+[text-wrap] {
+  --attr-text-wrap: attr(text-wrap type(*));
+  text-wrap: var(--attr-text-wrap, attr(text-wrap type(*)));
 }

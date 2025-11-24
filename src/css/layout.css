@@ -1,28 +1,10 @@
 [display] {
   display: attr(display type(*));
 }
-[justify] {
-  justify-content: attr(justify type(*));
+[position] {
+  position: attr(position type(*));
 }
-[items] {
-  align-items: attr(items type(*));
-}
-[gap-x] {
-  --attr-gap-x: calc(attr(gap-x number) * var(--spacing));
-  column-gap: var(--attr-gap-x, attr(gap-x type(*)));
-}
-[gap-y] {
-  --attr-gap-y: calc(attr(gap-y number) * var(--spacing));
-  row-gap: var(--attr-gap-y, attr(gap-y type(*)));
-}
-[gap] {
-  --attr-gap: calc(attr(gap number) * var(--spacing));
-  gap: var(--attr-gap, attr(gap type(*)));
-}
-[flex-direction] {
-  flex-direction: attr(flex-direction type(*));
-}
-[center='flex'] {
-  justify-content: center;
-  align-items: center;
+[bottom] {
+  --attr-bottom: calc(attr(bottom number) * var(--spacing));
+  bottom: var(--attr-bottom, attr(bottom type(*)));
 }
