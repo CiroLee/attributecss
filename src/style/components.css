@@ -35,12 +35,18 @@
     background-color: #348ff0;
   }
   .main-container {
-    max-width: 54%;
+    width: 92%;
+    max-width: 1440px;
     margin-inline: auto;
-    padding: 20px 0;
-    @media (max-width: 640px) {
-      max-width: 100%;
-      padding: 20px 16px;
+    padding-bottom: 24px;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(max-content, 240px) 1fr minmax(max-content, 240px);
+    gap: 16px;
+    @media (max-width: 928px) {
+      width: 100%;
+      padding: 0 16px;
+      display: block;
     }
   }
   .demo-code-container {

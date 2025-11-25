@@ -4,6 +4,5 @@
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "editor.formatOnSave": true,
-  "css.validate": false,
-  "cSpell.words": ["attributecss"]
+  "css.validate": false
 }

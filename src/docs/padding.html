@@ -7,116 +7,124 @@
     <link rel="stylesheet" href="../style/global.css" />
   </head>
   <body class="gradient-bg">
+    <nav-header></nav-header>
     <div class="main-container">
-      <div font-size="14">SPACING</div>
-      <h2>padding</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Attribute</th>
-            <th>Style</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>p=&lt;number&gt;</code></td>
-            <td><code>padding: calc(var(--spacing) * &lt;number&gt;)</code></td>
-          </tr>
-          <tr>
-            <td><code>p=[&lt;value&gt;]</code></td>
-            <td><code>padding: &lt;value&gt;</code></td>
-          </tr>
-          <tr>
-            <td><code>px=&lt;number&gt;</code></td>
-            <td><code>padding-inline: calc(var(--spacing) * &lt;number&gt;)</code></td>
-          </tr>
-          <tr>
-            <td><code>px=[&lt;value&gt;]</code></td>
-            <td><code>padding-inline: &lt;value&gt;</code></td>
-          </tr>
-          <tr>
-            <td><code>py=&lt;number&gt;</code></td>
-            <td><code>padding-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
-          </tr>
-          <tr>
-            <td><code>py=&lt;number&gt;</code></td>
-            <td><code>padding-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
-          </tr>
-          <tr>
-            <td><code>py=[&lt;value&gt;]</code></td>
-            <td><code>padding-block: &lt;value&gt;</code></td>
-          </tr>
-          <tr>
-            <td><code>pl=&lt;number&gt;</code></td>
-            <td><code>padding-left: calc(var(--spacing) * &lt;number&gt;)</code></td>
-          </tr>
-          <tr>
-            <td><code>pl=[&lt;value&gt;]</code></td>
-            <td><code>padding-left: &lt;value&gt;</code></td>
-          </tr>
-          <tr>
-            <td><code>pr=&lt;number&gt;</code></td>
-            <td><code>padding-right: calc(var(--spacing) * &lt;number&gt;)</code></td>
-          </tr>
-          <tr>
-            <td><code>pr=[&lt;value&gt;]</code></td>
-            <td><code>padding-right: &lt;value&gt;</code></td>
-          </tr>
-        </tbody>
-      </table>
-      <h3 mt="8">Basic usage</h3>
-      <div class="demo-code-container">
-        <div class="demo" gap="4">
-          <div p="4" class="pattern-box padding">
-            <div size="16" class="demo-box">p="4"</div>
+      <side-nav active="padding"></side-nav>
+      <section mt="18">
+        <div font-size="14">SPACING</div>
+        <h2>padding</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Style</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>p=&lt;number&gt;</code></td>
+              <td><code>padding: calc(var(--spacing) * &lt;number&gt;)</code></td>
+            </tr>
+            <tr>
+              <td><code>p=[&lt;value&gt;]</code></td>
+              <td><code>padding: &lt;value&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>px=&lt;number&gt;</code></td>
+              <td><code>padding-inline: calc(var(--spacing) * &lt;number&gt;)</code></td>
+            </tr>
+            <tr>
+              <td><code>px=[&lt;value&gt;]</code></td>
+              <td><code>padding-inline: &lt;value&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>py=&lt;number&gt;</code></td>
+              <td><code>padding-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
+            </tr>
+            <tr>
+              <td><code>py=&lt;number&gt;</code></td>
+              <td><code>padding-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
+            </tr>
+            <tr>
+              <td><code>py=[&lt;value&gt;]</code></td>
+              <td><code>padding-block: &lt;value&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>pl=&lt;number&gt;</code></td>
+              <td><code>padding-left: calc(var(--spacing) * &lt;number&gt;)</code></td>
+            </tr>
+            <tr>
+              <td><code>pl=[&lt;value&gt;]</code></td>
+              <td><code>padding-left: &lt;value&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>pr=&lt;number&gt;</code></td>
+              <td><code>padding-right: calc(var(--spacing) * &lt;number&gt;)</code></td>
+            </tr>
+            <tr>
+              <td><code>pr=[&lt;value&gt;]</code></td>
+              <td><code>padding-right: &lt;value&gt;</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 mt="8" id="basic">basic usage</h3>
+        <div class="demo-code-container">
+          <div class="demo" gap="4">
+            <div p="4" class="pattern-box padding">
+              <div size="16" class="demo-box">p="4"</div>
+            </div>
+            <div p="1rem" class="pattern-box padding">
+              <div size="16" class="demo-box">p="1rem"</div>
+            </div>
           </div>
-          <div p="1rem" class="pattern-box padding">
-            <div size="16" class="demo-box">p="1rem"</div>
-          </div>
-        </div>
-        <div class="code">
-          <syntax-highlight language="html" id="basic-use"><div p="4">p="4"</div></syntax-highlight>
-        </div>
-      </div>
-      <h3 mt="8">Add padding to one side</h3>
-      <div class="demo-code-container">
-        <div class="demo" gap="4">
-          <div pt="4" class="pattern-box padding">
-            <div size="16" class="demo-box">pt="4"</div>
-          </div>
-          <div pr="4" class="pattern-box padding">
-            <div size="16" class="demo-box">pr="4"</div>
-          </div>
-          <div pb="4" class="pattern-box padding">
-            <div size="16" class="demo-box">pb="4"</div>
-          </div>
-          <div pl="4" class="pattern-box padding">
-            <div size="16" class="demo-box">pl="4"</div>
+          <div class="code">
+            <syntax-highlight language="html" id="basic-use"><div p="4">p="4"</div></syntax-highlight>
           </div>
         </div>
-        <div class="code">
-          <syntax-highlight language="html" id="one-side"></syntax-highlight>
-        </div>
-      </div>
-      <h3 mt="8">Add vertical and horizontal padding</h3>
-      <div class="demo-code-container">
-        <div class="demo" gap="4">
-          <div px="4" class="pattern-box padding">
-            <div size="16" class="demo-box">px="4"</div>
+        <h3 mt="8" id="add-to-one-side">add padding to one side</h3>
+        <div class="demo-code-container">
+          <div class="demo" gap="4">
+            <div pt="4" class="pattern-box padding">
+              <div size="16" class="demo-box">pt="4"</div>
+            </div>
+            <div pr="4" class="pattern-box padding">
+              <div size="16" class="demo-box">pr="4"</div>
+            </div>
+            <div pb="4" class="pattern-box padding">
+              <div size="16" class="demo-box">pb="4"</div>
+            </div>
+            <div pl="4" class="pattern-box padding">
+              <div size="16" class="demo-box">pl="4"</div>
+            </div>
           </div>
-          <div py="4" class="pattern-box padding">
-            <div size="16" class="demo-box">py="4"</div>
+          <div class="code">
+            <syntax-highlight language="html" id="one-side"></syntax-highlight>
           </div>
         </div>
-        <div class="code">
-          <syntax-highlight language="html" id="hv"></syntax-highlight>
+        <h3 mt="8" id="add-to-both">add vertical and horizontal padding</h3>
+        <div class="demo-code-container">
+          <div class="demo" gap="4">
+            <div px="4" class="pattern-box padding">
+              <div size="16" class="demo-box">px="4"</div>
+            </div>
+            <div py="4" class="pattern-box padding">
+              <div size="16" class="demo-box">py="4"</div>
+            </div>
+          </div>
+          <div class="code">
+            <syntax-highlight language="html" id="hv"></syntax-highlight>
+          </div>
         </div>
-      </div>
+      </section>
+      <on-this-page></on-this-page>
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script type="module">
     import '../components/syntax-highlight.js';
+    import '../components/header.js';
+    import '../components/side-nav.js';
+    import '../components/on-this-page.js';
     import { baseUsageCode, oneSideCode, hvCode } from '../codes/padding.js';
     const baseUseEl = document.getElementById('basic-use');
     const oneSideEl = document.getElementById('one-side');

@@ -8,3 +8,13 @@
   --attr-bottom: calc(attr(bottom number) * var(--spacing));
   bottom: var(--attr-bottom, attr(bottom type(*)));
 }
+
+[overflow] {
+  overflow: attr(overflow type(*));
+}
+[overflow-x] {
+  overflow-x: attr(overflow-x type(*));
+}
+[overflow-y] {
+  overflow-y: attr(overflow-y type(*));
+}
