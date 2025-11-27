@@ -1,10 +1,12 @@
 class SyntaxHighlight extends HTMLElement {
+  #codeContent;
   static {
     customElements.define('syntax-highlight', this);
   }
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this.#codeContent = '';
   }
 
   static get observedAttributes() {
@@ -19,11 +21,11 @@ class SyntaxHighlight extends HTMLElement {
     this.#render();
   }
   set code(value) {
-    this.innerHTML = value;
+    this.#codeContent = value;
     this.#render(this.getAttribute('language'));
   }
   #render() {
-    let code = this.innerHTML;
+    let code = this.#codeContent || this.innerHTML;
     const html = hljs.highlight(code, { language: this.language }).value;
 
     this.shadowRoot.innerHTML /* html */ = `

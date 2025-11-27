@@ -29,6 +29,7 @@
 [overflow-y] {
   overflow-y: attr(overflow-y type(*));
 }
+/* aspect-ratio */
 [aspect='square'] {
   aspect-ratio: 1 / 1;
 }
@@ -37,4 +38,8 @@
 }
 [aspect]:not([aspect='square'], [aspect='video']) {
   aspect-ratio: attr(aspect type(*));
+}
+/* object-fit */
+[object] {
+  object-fit: attr(object type(*));
 }
