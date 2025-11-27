@@ -1,5 +1,16 @@
 export const navigationConfig = [
   {
+    id: 'layout',
+    label: 'Layout',
+    children: [
+      {
+        id: 'aspect-ratio',
+        label: 'aspect-ratio',
+        path: './aspect-ratio.html',
+      },
+    ],
+  },
+  {
     id: 'spacing',
     label: 'Spacing',
     children: [

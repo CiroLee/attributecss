@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout | aspect-ratio - AttributeCSS</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body class="gradient-bg">
+    <nav-header></nav-header>
+    <div class="main-container">
+      <side-nav active="aspect-ratio"></side-nav>
+      <section mt="18">
+        <div font-size="14">LAYOUT</div>
+        <h2>aspect-ratio</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Style</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>aspect="square"</code></td>
+              <td><code>aspect-ratio: 1 / 1</code></td>
+            </tr>
+            <tr>
+              <td><code>aspect="video"</code></td>
+              <td><code>aspect-ratio: 16 / 9</code></td>
+            </tr>
+            <tr>
+              <td><code>aspect=&lt;ratio&gt;</code></td>
+              <td><code>aspect-ratio: &lt;ratio&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>aspect=[&lt;value&gt;]</code></td>
+              <td><code>aspect-ratio: &lt;value&gt;</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 mt="8" id="basic">basic usage</h3>
+        <div class="demo-code-container">
+          <div class="demo" py="4">
+            <img src="../assets/images/nature.webp" alt="nature" w="50%" radius="3" aspect="video" />
+          </div>
+          <div class="code">
+            <syntax-highlight language="html" id="aspect-ratio-code"></syntax-highlight>
+          </div>
+        </div>
+      </section>
+      <on-this-page></on-this-page>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script type="module">
+    import '../components/syntax-highlight.js';
+    import '../components/header.js';
+    import '../components/side-nav.js';
+    import '../components/on-this-page.js';
+    const aspectRatioCodeEl = document.getElementById('aspect-ratio-code');
+    aspectRatioCodeEl.code = `<img src="../assets/images/nature.webp" aspect="video" alt="nature" />`;
+  </script>
+</html>

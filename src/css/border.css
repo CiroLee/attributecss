@@ -1,4 +1,4 @@
 [radius] {
-  --attr-radius: attr(radius px);
+  --attr-radius: calc(attr(radius number) * var(--spacing));
   border-radius: var(--attr-radius, attr(radius type(*)));
 }

@@ -4,11 +4,22 @@
 [position] {
   position: attr(position type(*));
 }
+[top] {
+  --attr-top: calc(attr(top number) * var(--spacing));
+  top: var(--attr-top, attr(top type(*)));
+}
+[left] {
+  --attr-left: calc(attr(left number) * var(--spacing));
+  left: var(--attr-left, attr(left type(*)));
+}
+[right] {
+  --attr-right: calc(attr(right number) * var(--spacing));
+  right: var(--attr-right, attr(right type(*)));
+}
 [bottom] {
   --attr-bottom: calc(attr(bottom number) * var(--spacing));
   bottom: var(--attr-bottom, attr(bottom type(*)));
 }
-
 [overflow] {
   overflow: attr(overflow type(*));
 }
@@ -17,4 +28,13 @@
 }
 [overflow-y] {
   overflow-y: attr(overflow-y type(*));
+}
+[aspect='square'] {
+  aspect-ratio: 1 / 1;
+}
+[aspect='video'] {
+  aspect-ratio: 16 / 9;
+}
+[aspect]:not([aspect='square'], [aspect='video']) {
+  aspect-ratio: attr(aspect type(*));
 }
