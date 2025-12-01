@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout | columns - AttributeCSS</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body class="gradient-bg">
+    <nav-header></nav-header>
+    <div class="main-container">
+      <side-nav active="columns"></side-nav>
+      <section mt="18">
+        <div font-size="14">LAYOUT</div>
+        <h2>columns</h2>
+        <p color="var(--secondary-color)">Utilities for controlling the number of columns within an element.</p>
+        <h3 mt="8" id="columns-number">setting by number</h3>
+        <div class="demo-code-container">
+          <div class="demo">
+            <div cols="3" p="4">
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-1.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-2.webp" aspect="square" w="full" radius="2" />
+                <img src="../assets/images/nature-3.webp" aspect="video" w="full" radius="2" />
+              </div>
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-3.webp" aspect="square" w="full" radius="2" />
+                <img src="../assets/images/nature-4.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-5.webp" aspect="video" w="full" radius="2" />
+              </div>
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-4.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-5.webp" aspect="video" w="full" radius="2" />
+                <img src="../assets/images/nature-1.webp" aspect="square" w="full" radius="2" />
+              </div>
+            </div>
+          </div>
+          <div class="code">
+            <syntax-highlight language="html" id="cols-number"></syntax-highlight>
+          </div>
+        </div>
+        <h3 mt="8" id="columns-width">setting by width</h3>
+        <div class="demo-code-container">
+          <div class="demo">
+            <div cols="200px" max-w="540px" p="4" gap="10">
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-1.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-2.webp" aspect="square" w="full" radius="2" />
+                <img src="../assets/images/nature-3.webp" aspect="video" w="full" radius="2" />
+              </div>
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-3.webp" aspect="square" w="full" radius="2" />
+                <img src="../assets/images/nature-4.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-5.webp" aspect="video" w="full" radius="2" />
+              </div>
+            </div>
+          </div>
+          <div class="code">
+            <syntax-highlight language="html" id="cols-width"></syntax-highlight>
+          </div>
+        </div>
+        <h3 mt="8" id="columns-gap" data-desc="set columns gap by gap">set columns gap by `<ui-code>gap="&lt;width&gt;"</ui-code>`</h3>
+        <div class="demo-code-container">
+          <div class="demo">
+            <div cols="3" p="4" gap="10">
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-1.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-2.webp" aspect="square" w="full" radius="2" />
+                <img src="../assets/images/nature-3.webp" aspect="video" w="full" radius="2" />
+              </div>
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-3.webp" aspect="square" w="full" radius="2" />
+                <img src="../assets/images/nature-4.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-5.webp" aspect="video" w="full" radius="2" />
+              </div>
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-4.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-5.webp" aspect="video" w="full" radius="2" />
+                <img src="../assets/images/nature-1.webp" aspect="square" w="full" radius="2" />
+              </div>
+            </div>
+          </div>
+          <div class="code">
+            <syntax-highlight language="html" id="cols-gap"></syntax-highlight>
+          </div>
+        </div>
+        <h3 mt="8" id="columns-rule">set columns rule</h3>
+        <div class="demo-code-container">
+          <div class="demo">
+            <div cols="3" p="4" gap="10" cols-rule="2px dashed blue">
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-1.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-2.webp" aspect="square" w="full" radius="2" />
+                <img src="../assets/images/nature-3.webp" aspect="video" w="full" radius="2" />
+              </div>
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-3.webp" aspect="square" w="full" radius="2" />
+                <img src="../assets/images/nature-4.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-5.webp" aspect="video" w="full" radius="2" />
+              </div>
+              <div class="pattern-box secondary" space-y="4" py="6" position="relative" overflow="hidden">
+                <img src="../assets/images/nature-4.webp" aspect="4/3" w="full" radius="2" />
+                <img src="../assets/images/nature-5.webp" aspect="video" w="full" radius="2" />
+                <img src="../assets/images/nature-1.webp" aspect="square" w="full" radius="2" />
+              </div>
+            </div>
+          </div>
+          <div class="code">
+            <syntax-highlight language="html" id="cols-rule"></syntax-highlight>
+          </div>
+        </div>
+      </section>
+      <on-this-page></on-this-page>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script type="module">
+    import '../components/syntax-highlight.js';
+    import '../components/header.js';
+    import '../components/side-nav.js';
+    import '../components/on-this-page.js';
+    import '../components/code.js';
+    import { columnsNumberCode, columnsWidthCode, columnsGapCode, columnsRuleCode } from '../codes/columns.js';
+    const colsNumberEl = document.getElementById('cols-number');
+    const colsWidthEl = document.getElementById('cols-width');
+    const colsGapEl = document.getElementById('cols-gap');
+    const colsRuleEl = document.getElementById('cols-rule');
+    colsNumberEl.code = columnsNumberCode;
+    colsWidthEl.code = columnsWidthCode;
+    colsGapEl.code = columnsGapCode;
+    colsRuleEl.code = columnsRuleCode;
+  </script>
+</html>

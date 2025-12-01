@@ -43,3 +43,13 @@
 [object] {
   object-fit: attr(object type(*));
 }
+
+/* columns */
+[cols] {
+  --attr-cols: attr(cols number);
+  columns: var(--attr-cols, attr(cols type(*)));
+}
+[cols-rule] {
+  --attr-cols-rule: attr(cols-rule type(*));
+  column-rule: var(--attr-cols-rule, attr(cols-rule type(*)));
+}

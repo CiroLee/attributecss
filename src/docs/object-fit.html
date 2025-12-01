@@ -13,6 +13,7 @@
       <section mt="18">
         <div font-size="14">LAYOUT</div>
         <h2>object-fit</h2>
+        <p color="var(--secondary-color)">Utilities for controlling how a replaced element's content should be resized.</p>
         <table class="table">
           <thead>
             <tr>
@@ -46,7 +47,7 @@
         <h3 mt="8" id="cover">object cover</h3>
         <div class="demo-code-container">
           <div class="demo" py="4">
-            <img src="../assets/images/nature.webp" alt="nature" w="80" h="45" radius="3" object="cover" />
+            <img src="../assets/images/nature-1.webp" alt="nature" w="80" h="45" radius="3" object="cover" />
           </div>
           <div class="code">
             <syntax-highlight language="html" id="object-cover-code"></syntax-highlight>
@@ -56,7 +57,7 @@
         <div class="demo-code-container">
           <div class="demo" py="4">
             <div class="pattern-box" display="flex" overflow="hidden">
-              <img src="../assets/images/nature.webp" alt="nature" w="80" h="45" object="contain" />
+              <img src="../assets/images/nature-1.webp" alt="nature" w="80" h="45" object="contain" />
             </div>
           </div>
           <div class="code">
@@ -67,7 +68,7 @@
         <div class="demo-code-container">
           <div class="demo" py="4">
             <div class="pattern-box" display="flex" overflow="hidden">
-              <img src="../assets/images/nature.webp" alt="nature" w="80" h="45" object="fill" />
+              <img src="../assets/images/nature-1.webp" alt="nature" w="80" h="45" object="fill" />
             </div>
           </div>
           <div class="code">
@@ -87,8 +88,8 @@
     const objectCoverCodeEl = document.getElementById('object-cover-code');
     const objectContainCodeEl = document.getElementById('object-contain-code');
     const objectFillCodeEl = document.getElementById('object-fill-code');
-    objectCoverCodeEl.code = `<img src="../assets/images/nature.webp" w="80" h="45" alt="nature" object="cover" />`;
-    objectContainCodeEl.code = `<img src="../assets/images/nature.webp" w="80" h="45" alt="nature" object="contain" />`;
-    objectFillCodeEl.code = `<img src="../assets/images/nature.webp" w="80" h="45" alt="nature" object="fill" />`;
+    objectCoverCodeEl.code = `<img src="../assets/images/nature-1.webp" w="80" h="45" alt="nature" object="cover" />`;
+    objectContainCodeEl.code = `<img src="../assets/images/nature-1.webp" w="80" h="45" alt="nature" object="contain" />`;
+    objectFillCodeEl.code = `<img src="../assets/images/nature-1.webp" w="80" h="45" alt="nature" object="fill" />`;
   </script>
 </html>

@@ -70,7 +70,12 @@ class OnThisPage extends HTMLElement {
   }
   #updateList() {
     const hEls = Array.from(document.querySelectorAll('h3')).filter((el) => el.id);
-    return hEls.map((el) => `<div class="item" data-id=${el.id}>${el.textContent}</div>`).join('');
+    return hEls
+      .map((el) => {
+        const desc = el.dataset.desc ?? el.textContent;
+        return `<div class="item" data-id=${el.id}>${desc}</div>`;
+      })
+      .join('');
   }
   #observeActive() {
     const hEls = Array.from(document.querySelectorAll('h3')).filter((el) => el.id);

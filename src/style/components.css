@@ -25,6 +25,12 @@
         background-color: hsla(32, 62%, 50%, 0.8);
       }
     }
+    &.secondary {
+      background-color: hsl(0 0% 9% / 20%);
+      &:hover {
+        background-color: hsl(0 0% 9% / 30%);
+      }
+    }
   }
   .demo-box {
     font-size: 14px;

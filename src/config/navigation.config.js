@@ -9,6 +9,11 @@ export const navigationConfig = [
         path: './aspect-ratio.html',
       },
       {
+        id: 'columns',
+        label: 'columns',
+        path: './columns.html',
+      },
+      {
         id: 'object-fit',
         label: 'object-fit',
         path: './object-fit.html',
