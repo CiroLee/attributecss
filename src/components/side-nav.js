@@ -45,9 +45,12 @@ class SideNav extends HTMLElement {
           padding: 8px;
           box-sizing: border-box;
           overflow: auto;
+          & > :not(:last-child) {
+            margin-block-end: 20px;
+          }
         }
         .nav-group {
-          margin-bottom: 20px;
+
           display: flex;
           flex-direction: column;
         }
