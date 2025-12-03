@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout | box-sizing - AttributeCSS</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body class="gradient-bg">
+    <nav-header></nav-header>
+    <div class="main-container">
+      <side-nav active="box-sizing"></side-nav>
+      <section mt="18">
+        <div font-size="14">LAYOUT</div>
+        <h2>box-sizing</h2>
+        <p color="var(--secondary-color)">Utilities for controlling how the browser should calculate an element's total size.</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>Style</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>box="border"</code></td>
+              <td><code>box-sizing: box-border</code></td>
+            </tr>
+            <tr>
+              <td><code>box="content"</code></td>
+              <td><code>box-sizing: box-content</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <on-this-page></on-this-page>
+    </div>
+  </body>
+  <script type="module">
+    import '../components/syntax-highlight.js';
+    import '../components/header.js';
+    import '../components/side-nav.js';
+    import '../components/on-this-page.js';
+  </script>
+</html>

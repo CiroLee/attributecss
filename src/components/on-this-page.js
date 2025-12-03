@@ -97,7 +97,7 @@ class OnThisPage extends HTMLElement {
         });
       },
       {
-        rootMargin: '-66px 0px -85% 0px', // 顶部偏移66px(header高度)，底部偏移85%使元素在视口上部时就激活
+        rootMargin: '-40% 0px -85% 0px', // 顶部偏移，底部偏移85%使元素在视口上部时就激活
       },
     );
     hEls.forEach((el) => observer.observe(el));

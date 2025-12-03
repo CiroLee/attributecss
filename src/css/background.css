@@ -1,0 +1,11 @@
+[bg-color] {
+  --attr-bg-color: attr(bg-color type(*));
+  background-color: var(--attr-bg-color);
+}
+[bg-alpha] {
+  background-color: color-mix(in oklab, var(--attr-bg-color) attr(bg-alpha %), transparent);
+}
+[bg-linear] {
+  --attr-linear-gradient: attr(bg-linear type(*));
+  background: linear-gradient(var(--attr-linear-gradient));
+}

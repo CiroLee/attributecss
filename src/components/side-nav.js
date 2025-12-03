@@ -23,7 +23,10 @@ class SideNav extends HTMLElement {
     const result = navigationConfig.map((item) => {
       if (item.children && item.children.length) {
         return `<div class="nav-group">
-          <div class="nav-group__title">${item.label}</div>${item.children.map((child) => `<a href="${child.path}" id="${child.id}" class="nav-link">${child.label}</a>`).join('')}
+          <div class="nav-group__title">${item.label}</div>${item.children
+          .sort((a, b) => a.label.localeCompare(b.label, 'en'))
+          .map((child) => `<a href="${child.path}" id="${child.id}" class="nav-link">${child.label}</a>`)
+          .join('')}
         </div>`;
       }
       return `<a href="${item.path}" id="${item.id}" class="nav-link">${item.label}</a>`;

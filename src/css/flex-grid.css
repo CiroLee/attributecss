@@ -28,8 +28,12 @@
   --attr-gap: calc(attr(gap number) * var(--spacing));
   gap: var(--attr-gap, attr(gap type(*)));
 }
-/* grid */
+/* grid columns and rows */
 [grid-cols] {
   --attr-grid-cols: attr(grid-cols number);
   grid-template-columns: if(style(var(--attr-grid-cols, 0) > 0): repeat(var(--attr-grid-cols), minmax(0, 1fr)) ; else: attr(grid-cols type(*)));
+}
+[grid-rows] {
+  --attr-grid-rows: attr(grid-rows number);
+  grid-template-columns: if(style(var(--attr-grid-rows, 0) > 0): repeat(var(--attr-grid-rows), minmax(0, 1fr)) ; else: attr(grid-cols type(*)));
 }

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout | top / right / bottom / left - AttributeCSS</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body class="gradient-bg">
+    <nav-header></nav-header>
+    <div class="main-container">
+      <side-nav active="top-right-bottom-left"></side-nav>
+      <section mt="18">
+        <div font-size="14">LAYOUT</div>
+        <h2>top / right / bottom / left</h2>
+        <p color="var(--secondary-color)">Utilities for controlling the placement of positioned elements.</p>
+        <div position="relative">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Attribute</th>
+                <th>Style</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>top=&lt;number&gt;</code></td>
+                <td><code>top: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>top=[&lt;value&gt;]</code></td>
+                <td><code>top: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>right=&lt;number&gt;</code></td>
+                <td><code>right: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>right=[&lt;value&gt;]</code></td>
+                <td><code>right: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>bottom=&lt;number&gt;</code></td>
+                <td><code>bottom: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>bottom=[&lt;value&gt;]</code></td>
+                <td><code>bottom: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>left=&lt;number&gt;</code></td>
+                <td><code>left: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>left=[&lt;value&gt;]</code></td>
+                <td><code>left: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>inset="full"</code></td>
+                <td><code>inset: 100%</code></td>
+              </tr>
+              <tr>
+                <td><code>inset="-full"</code></td>
+                <td><code>inset: -100%</code></td>
+              </tr>
+            </tbody>
+            <tbody id="table-more" hidden>
+              <tr>
+                <td><code>inset=&lt;number&gt;</code></td>
+                <td><code>inset: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>inset=[&lt;value&gt;]</code></td>
+                <td><code>inset: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>inset-x="full"</code></td>
+                <td><code>inset-x: 100%</code></td>
+              </tr>
+              <tr>
+                <td><code>inset-x="-full"</code></td>
+                <td><code>inset-x: -100%</code></td>
+              </tr>
+              <tr>
+                <td><code>inset-x=&lt;number&gt;</code></td>
+                <td><code>inset-x: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>inset-x=[&lt;value&gt;]</code></td>
+                <td><code>inset-x: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>inset-y="full"</code></td>
+                <td><code>inset-y: 100%</code></td>
+              </tr>
+              <tr>
+                <td><code>inset-y="-full"</code></td>
+                <td><code>inset-y: -100%</code></td>
+              </tr>
+              <tr>
+                <td><code>inset-y=&lt;number&gt;</code></td>
+                <td><code>inset-y: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>inset-y=[&lt;value&gt;]</code></td>
+                <td><code>inset-y: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>start="full"</code></td>
+                <td><code>inset-inline-start: 100%</code></td>
+              </tr>
+              <tr>
+                <td><code>start="-full"</code></td>
+                <td><code>inset-inline-start: -100%</code></td>
+              </tr>
+              <tr>
+                <td><code>start=&lt;number&gt;</code></td>
+                <td><code>inset-inline-start: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>start=[&lt;value&gt;]</code></td>
+                <td><code>inset-inline-start: &lt;value&gt;</code></td>
+              </tr>
+
+              <tr>
+                <td><code>end="full"</code></td>
+                <td><code>inset-inline-end: 100%</code></td>
+              </tr>
+              <tr>
+                <td><code>end="-full"</code></td>
+                <td><code>inset-inline-end: -100%</code></td>
+              </tr>
+              <tr>
+                <td><code>end=&lt;number&gt;</code></td>
+                <td><code>inset-inline-end: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>end=[&lt;value&gt;]</code></td>
+                <td><code>inset-inline-end: &lt;value&gt;</code></td>
+              </tr>
+            </tbody>
+            <div position="absolute" display="flex" center="flex" w="full" h="14" bg-linear="to top, rgb(0 0 0 / 5%) 10%, transparent" bottom="0">
+              <button id="collapse-btn" class="button" h="9">EXPAND</button>
+            </div>
+          </table>
+        </div>
+        <h3 id="basic">basic usage</h3>
+        <div class="demo-code-container">
+          <div class="demo">
+            <div display="grid" overflow="auto" gap="6" p="4" grid-cols="3" grid-rows="3">
+              <div class="pattern-box secondary" position="relative" size="30">
+                <div class="demo-box" radius="2" position="absolute" top="0" left="0" size="16">01</div>
+              </div>
+              <div class="pattern-box secondary" position="relative" size="30">
+                <div class="demo-box" radius="2" position="absolute" top="0" inset-x="0" h="16">02</div>
+              </div>
+              <div class="pattern-box secondary" position="relative" size="30">
+                <div class="demo-box" radius="2" position="absolute" top="0" right="0" size="16">03</div>
+              </div>
+              <div class="pattern-box secondary" position="relative" size="30">
+                <div class="demo-box" radius="2" position="absolute" left="0" inset-y="0" w="16">04</div>
+              </div>
+              <div class="pattern-box secondary" position="relative" size="30">
+                <div class="demo-box" radius="2" position="absolute" inset="0">05</div>
+              </div>
+              <div class="pattern-box secondary" position="relative" size="30">
+                <div class="demo-box" radius="2" position="absolute" right="0" inset-y="0" w="16">06</div>
+              </div>
+              <div class="pattern-box secondary" position="relative" size="30">
+                <div class="demo-box" radius="2" position="absolute" left="0" bottom="0" size="16">07</div>
+              </div>
+              <div class="pattern-box secondary" position="relative" size="30">
+                <div class="demo-box" radius="2" position="absolute" inset-x="0" bottom="0" h="16">08</div>
+              </div>
+              <div class="pattern-box secondary" position="relative" size="30">
+                <div class="demo-box" radius="2" position="absolute" right="0" bottom="0" size="16">09</div>
+              </div>
+            </div>
+          </div>
+          <div class="code">
+            <syntax-highlight language="html" id="basic-code"></syntax-highlight>
+          </div>
+        </div>
+        <h3 mt="8" id="negative-vaue">use negative values</h3>
+        <div class="demo-code-container">
+          <div class="demo" py="10">
+            <div class="pattern-box secondary" position="relative" size="30">
+              <div class="demo-box" size="10" radius="2" position="absolute" top="-3" left="-3"></div>
+            </div>
+          </div>
+          <div class="code">
+            <syntax-highlight language="html" id="negative-value-code"></syntax-highlight>
+          </div>
+        </div>
+        <h3 mt="8" id="logical-property">use logical properties</h3>
+        <div class="demo-code-container">
+          <div class="demo" gap="16" py="6">
+            <div>
+              <div mb="2">left-to-right</div>
+              <div dir="ltl" class="pattern-box secondary" size="30" position="relative">
+                <div class="demo-box" size="14" radius="2" position="absolute" start="0" top="0"></div>
+              </div>
+            </div>
+            <div>
+              <div mb="2">right-to-left</div>
+              <div dir="rtl" class="pattern-box secondary" size="30" position="relative">
+                <div class="demo-box" size="14" radius="2" position="absolute" start="0" top="0"></div>
+              </div>
+            </div>
+          </div>
+          <div class="code">
+            <syntax-highlight language="html" id="logical-property-code"></syntax-highlight>
+          </div>
+        </div>
+      </section>
+      <on-this-page></on-this-page>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script type="module">
+    import '../components/syntax-highlight.js';
+    import '../components/header.js';
+    import '../components/side-nav.js';
+    import '../components/on-this-page.js';
+    import { basicCode, negativeCode, logicalCode } from '../codes/top-right-bottom-left.js';
+    const basicEl = document.getElementById('basic-code');
+    const negativeEl = document.getElementById('negative-value-code');
+    const logicalEl = document.getElementById('logical-property-code');
+    basicEl.code = basicCode;
+    negativeEl.code = negativeCode;
+    logicalEl.code = logicalCode;
+
+    let isCollapsed = true;
+    const collapseBtn = document.getElementById('collapse-btn');
+    const tableMore = document.getElementById('table-more');
+    collapseBtn.addEventListener('click', () => {
+      isCollapsed = !isCollapsed;
+      if (isCollapsed) {
+        tableMore.setAttribute('hidden', '');
+        collapseBtn.textContent = 'EXPAND';
+      } else {
+        tableMore.removeAttribute('hidden');
+        collapseBtn.textContent = 'COLLAPSE';
+      }
+    });
+  </script>
+</html>

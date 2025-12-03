@@ -23,6 +23,16 @@ export const navigationConfig = [
         label: 'object-fit',
         path: './object-fit.html',
       },
+      {
+        id: 'box-sizing',
+        label: 'box-sizing',
+        path: './box-sizing.html',
+      },
+      {
+        id: 'top-right-bottom-left',
+        label: 'top / right / bottom / left',
+        path: './top-right-bottom-left.html',
+      },
     ],
   },
   {

@@ -4,6 +4,7 @@
 [position] {
   position: attr(position type(*));
 }
+/* top / left / right / bottom / inset */
 [top] {
   --attr-top: calc(attr(top number) * var(--spacing));
   top: var(--attr-top, attr(top type(*)));
@@ -20,6 +21,58 @@
   --attr-bottom: calc(attr(bottom number) * var(--spacing));
   bottom: var(--attr-bottom, attr(bottom type(*)));
 }
+/* inset */
+[inset='full'] {
+  inset: 100%;
+}
+[inset='-full'] {
+  inset: -100%;
+}
+[inset]:not([inset='full'], [inset='-full']) {
+  --attr-inset: calc(attr(inset number) * var(--spacing));
+  inset: var(--attr-inset, attr(inset type(*)));
+}
+[inset-x='full'] {
+  inset-inline: 100%;
+}
+[inset-x='-full'] {
+  inset-inline: -100%;
+}
+[inset-x]:not([inset-x='full'], [inset-x='-full']) {
+  --attr-inset-x: calc(attr(inset-x number) * var(--spacing));
+  inset-inline: var(--attr-inset-x, attr(inset-x type(*)));
+}
+[inset-y='full'] {
+  inset-block: 100%;
+}
+[inset-y='-full'] {
+  inset-block: -100%;
+}
+[inset-y]:not([inset-y='full'], [inset-y='-full']) {
+  --attr-inset-y: calc(attr(inset-y number) * var(--spacing));
+  inset-block: var(--attr-inset-y, attr(inset-y type(*)));
+}
+[start='full'] {
+  inset-inline-start: 100%;
+}
+[start='-full'] {
+  inset-inline-start: -100%;
+}
+[start]:not([start='full'], [start='-full']) {
+  --attr-start: calc(attr(start number) * var(--spacing));
+  inset-inline-start: var(--attr-start, attr(start type(*)));
+}
+[end='full'] {
+  inset-inline-end: 100%;
+}
+[end='-full'] {
+  inset-inline-end: -100%;
+}
+[end]:not([end='full'], [end='-full']) {
+  --attr-end: calc(attr(end number) * var(--spacing));
+  inset-inline-end: var(--attr-end, attr(end type(*)));
+}
+/* overflow */
 [overflow] {
   overflow: attr(overflow type(*));
 }
@@ -52,4 +105,8 @@
 [cols-rule] {
   --attr-cols-rule: attr(cols-rule type(*));
   column-rule: var(--attr-cols-rule, attr(cols-rule type(*)));
+}
+/* box-sizing */
+[box] {
+  box-sizing: attr(box type(*));
 }
