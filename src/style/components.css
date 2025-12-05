@@ -140,6 +140,7 @@
       font-size: 14px;
     }
   }
+  ::part(button),
   .button {
     display: inline-flex;
     align-items: center;

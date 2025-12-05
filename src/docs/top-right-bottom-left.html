@@ -139,9 +139,7 @@
                 <td><code>inset-inline-end: &lt;value&gt;</code></td>
               </tr>
             </tbody>
-            <div position="absolute" display="flex" center="flex" w="full" h="14" bg-linear="to top, rgb(0 0 0 / 5%) 10%, transparent" bottom="0">
-              <button id="collapse-btn" class="button" h="9">EXPAND</button>
-            </div>
+            <collapse-button />
           </table>
         </div>
         <h3 id="basic">basic usage</h3>
@@ -222,6 +220,7 @@
     import '../components/header.js';
     import '../components/side-nav.js';
     import '../components/on-this-page.js';
+    import '../components/collapse-button.js';
     import { basicCode, negativeCode, logicalCode } from '../codes/top-right-bottom-left.js';
     const basicEl = document.getElementById('basic-code');
     const negativeEl = document.getElementById('negative-value-code');
@@ -229,19 +228,5 @@
     basicEl.code = basicCode;
     negativeEl.code = negativeCode;
     logicalEl.code = logicalCode;
-
-    let isCollapsed = true;
-    const collapseBtn = document.getElementById('collapse-btn');
-    const tableMore = document.getElementById('table-more');
-    collapseBtn.addEventListener('click', () => {
-      isCollapsed = !isCollapsed;
-      if (isCollapsed) {
-        tableMore.setAttribute('hidden', '');
-        collapseBtn.textContent = 'EXPAND';
-      } else {
-        tableMore.removeAttribute('hidden');
-        collapseBtn.textContent = 'COLLAPSE';
-      }
-    });
   </script>
 </html>

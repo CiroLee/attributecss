@@ -14,92 +14,100 @@
         <div font-size="14">SPACING</div>
         <h2>margin</h2>
         <p color="var(--secondary-color)">Utilities for controlling elements's margin.</p>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Attribute</th>
-              <th>Style</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>m=&lt;number&gt;</code></td>
-              <td><code>margin: calc(var(--spacing) * &lt;number&gt;)</code></td>
-            </tr>
-            <tr>
-              <td><code>m=[&lt;value&gt;]</code></td>
-              <td><code>margin: &lt;value&gt;</code></td>
-            </tr>
-            <tr>
-              <td><code>mx=&lt;number&gt;</code></td>
-              <td><code>margin-inline: calc(var(--spacing) * &lt;number&gt;)</code></td>
-            </tr>
-            <tr>
-              <td><code>mx=[&lt;value&gt;]</code></td>
-              <td><code>margin-inline: &lt;value&gt;</code></td>
-            </tr>
-            <tr>
-              <td><code>my=&lt;number&gt;</code></td>
-              <td><code>margin-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
-            </tr>
-            <tr>
-              <td><code>my=[&lt;value&gt;]</code></td>
-              <td><code>margin-block: &lt;value&gt;</code></td>
-            </tr>
-            <tr>
-              <td><code>ml=&lt;number&gt;</code></td>
-              <td><code>margin-left: calc(var(--spacing) * &lt;number&gt;)</code></td>
-            </tr>
-            <tr>
-              <td><code>ml=[&lt;value&gt;]</code></td>
-              <td><code>margin-left: &lt;value&gt;</code></td>
-            </tr>
-            <tr>
-              <td><code>mr=&lt;number&gt;</code></td>
-              <td><code>margin-right: calc(var(--spacing) * &lt;number&gt;)</code></td>
-            </tr>
-            <tr>
-              <td><code>mr=[&lt;value&gt;]</code></td>
-              <td><code>margin-right: &lt;value&gt;</code></td>
-            </tr>
-            <tr>
-              <td><code>space-x=&lt;number&gt;</code></td>
-              <td>
-                <code> & > :not(:last-child) { margin-inline-end: calc(var(--spacing) * &lt;number&gt;); } </code>
-              </td>
-            </tr>
-            <tr>
-              <td><code>space-x=&lt;number&gt;</code></td>
-              <td>
-                <code>
-                  & > :not(:last-child) { <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;margin-inline-end: &lt;value&gt;; <br />
-                  }
-                </code>
-              </td>
-            </tr>
-            <tr>
-              <td><code>space-y=&lt;number&gt;</code></td>
-              <td>
-                <code>
-                  & > :not(:last-child) { <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;margin-block-end: calc(var(--spacing) * &lt;number&gt;); <br />
-                  }
-                </code>
-              </td>
-            </tr>
-            <tr>
-              <td><code>space-y=[&lt;value&gt;]</code></td>
-              <td>
-                <code
-                  >& > :not(:last-child) { <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;margin-block-end: &lt;value&gt;; <br />
-                  }
-                </code>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div position="relative">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Attribute</th>
+                <th>Style</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>m=&lt;number&gt;</code></td>
+                <td><code>margin: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>m=[&lt;value&gt;]</code></td>
+                <td><code>margin: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>mx=&lt;number&gt;</code></td>
+                <td><code>margin-inline: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>mx=[&lt;value&gt;]</code></td>
+                <td><code>margin-inline: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>my=&lt;number&gt;</code></td>
+                <td><code>margin-block: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>my=[&lt;value&gt;]</code></td>
+                <td><code>margin-block: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>ml=&lt;number&gt;</code></td>
+                <td><code>margin-left: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>ml=[&lt;value&gt;]</code></td>
+                <td><code>margin-left: &lt;value&gt;</code></td>
+              </tr>
+              <tr>
+                <td><code>mr=&lt;number&gt;</code></td>
+                <td><code>margin-right: calc(var(--spacing) * &lt;number&gt;)</code></td>
+              </tr>
+              <tr>
+                <td><code>mr=[&lt;value&gt;]</code></td>
+                <td><code>margin-right: &lt;value&gt;</code></td>
+              </tr>
+            </tbody>
+            <tbody id="table-more" hidden>
+              <tr>
+                <td><code>space-x=&lt;number&gt;</code></td>
+                <td>
+                  <code> & > :not(:last-child) { margin-inline-end: calc(var(--spacing) * &lt;number&gt;); } </code>
+                </td>
+              </tr>
+              <tr>
+                <td><code>space-x=&lt;number&gt;</code></td>
+                <td>
+                  <code>
+                    & > :not(:last-child) { <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;margin-inline-end: &lt;value&gt;; <br />
+                    }
+                  </code>
+                </td>
+              </tr>
+              <tr>
+                <td><code>space-y=&lt;number&gt;</code></td>
+                <td>
+                  <code>
+                    & > :not(:last-child) { <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;margin-block-end: calc(var(--spacing) * &lt;number&gt;); <br />
+                    }
+                  </code>
+                </td>
+              </tr>
+              <tr>
+                <td><code>space-y=[&lt;value&gt;]</code></td>
+                <td>
+                  <code
+                    >& > :not(:last-child) { <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;margin-block-end: &lt;value&gt;; <br />
+                    }
+                  </code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- <div position="absolute" display="flex" center="flex" w="full" h="14" bg-linear="to top, rgb(0 0 0 / 5%) 10%, transparent" bottom="0">
+            <button id="collapse-btn" class="button" h="9">EXPAND</button>
+          </div> -->
+          <collapse-button />
+        </div>
         <h3 mt="8" id="basic">basic usage</h3>
         <div class="demo-code-container">
           <div class="demo" gap="4">
@@ -197,6 +205,7 @@
     import '../components/header.js';
     import '../components/side-nav.js';
     import '../components/on-this-page.js';
+    import '../components/collapse-button.js';
     import { spaceXCode, spaceYCode, customSpaceXCode, baseUsageCode, oneSideCode, hvCode } from '../codes/margin.js';
     const baseUsageEl = document.getElementById('base-usage');
     const oneSideEl = document.getElementById('one-side');
