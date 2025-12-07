@@ -44,52 +44,11 @@
             </tr>
           </tbody>
         </table>
-        <h3 mt="8" id="cover">object cover</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="4">
-            <img src="../assets/images/nature-1.webp" alt="nature" w="80" h="45" radius="3" object="cover" />
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="object-cover-code"></syntax-highlight>
-          </div>
-        </div>
-        <h3 mt="8" id="contain">object contain</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="4">
-            <div class="pattern-box" display="flex" overflow="hidden">
-              <img src="../assets/images/nature-1.webp" alt="nature" w="80" h="45" object="contain" />
-            </div>
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="object-contain-code"></syntax-highlight>
-          </div>
-        </div>
-        <h3 mt="8" id="fill">object fill</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="4">
-            <div class="pattern-box" display="flex" overflow="hidden">
-              <img src="../assets/images/nature-1.webp" alt="nature" w="80" h="45" object="fill" />
-            </div>
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="object-fill-code"></syntax-highlight>
-          </div>
-        </div>
       </section>
-      <on-this-page></on-this-page>
     </div>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script type="module">
-    import '../components/syntax-highlight.js';
     import '../components/header.js';
     import '../components/side-nav.js';
-    import '../components/on-this-page.js';
-    const objectCoverCodeEl = document.getElementById('object-cover-code');
-    const objectContainCodeEl = document.getElementById('object-contain-code');
-    const objectFillCodeEl = document.getElementById('object-fill-code');
-    objectCoverCodeEl.code = `<img src="../assets/images/nature-1.webp" w="80" h="45" alt="nature" object="cover" />`;
-    objectContainCodeEl.code = `<img src="../assets/images/nature-1.webp" w="80" h="45" alt="nature" object="contain" />`;
-    objectFillCodeEl.code = `<img src="../assets/images/nature-1.webp" w="80" h="45" alt="nature" object="fill" />`;
   </script>
 </html>

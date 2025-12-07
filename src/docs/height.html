@@ -106,87 +106,11 @@
             </tr>
           </tbody>
         </table>
-        <h3 mt="8" id="basic">basic usage</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="6">
-            <div display="flex" items="end" gap="4">
-              <div h="96" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-96</div></div>
-              <div h="80" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-80</div></div>
-              <div h="64" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-64</div></div>
-              <div h="48" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-48</div></div>
-              <div h="40" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-40</div></div>
-              <div h="32" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-32</div></div>
-              <div h="24" display="flex" justify="center" items="end" class="bar-v"><div text-wrap="nowrap" mb="4" rotate="-90">h-24</div></div>
-            </div>
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="height-basic-code"></syntax-highlight>
-          </div>
-        </div>
-        <h3 mt="8" id="min-height">min-height</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="8">
-            <div h="96" display="flex" items="end">
-              <div h="20" class="pattern-box" display="flex" gap="4" px="4">
-                <div min-h="96" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="96"</div></div>
-                <div min-h="80" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="80"</div></div>
-                <div min-h="64" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="64"</div></div>
-                <div min-h="48" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="48"</div></div>
-                <div min-h="40" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="40"</div></div>
-                <div min-h="32" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="32"</div></div>
-                <div min-h="24" display="flex" justify="center" items="end" items-self="end" class="bar-v"><div text-wrap="nowrap" mb="3em" rotate="-90">min-h="24"</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="min-height-code"></syntax-highlight>
-          </div>
-        </div>
-        <h3 mt="8" id="max-height">max-height</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="8" gap="4">
-            <div class="pattern-box" h="100" display="flex">
-              <div class="bar-v" h="full" max-h="96" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="96"</div></div>
-            </div>
-            <div class="pattern-box" h="100" display="flex">
-              <div class="bar-v" h="full" max-h="80" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="80"</div></div>
-            </div>
-            <div class="pattern-box" h="100" display="flex">
-              <div class="bar-v" h="full" max-h="64" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="64"</div></div>
-            </div>
-            <div class="pattern-box" h="100" display="flex">
-              <div class="bar-v" h="full" max-h="48" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="48"</div></div>
-            </div>
-            <div class="pattern-box" h="100" display="flex">
-              <div class="bar-v" h="full" max-h="40" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="40"</div></div>
-            </div>
-            <div class="pattern-box" h="100" display="flex">
-              <div class="bar-v" h="full" max-h="32" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="32"</div></div>
-            </div>
-            <div class="pattern-box" h="100" display="flex">
-              <div class="bar-v" h="full" max-h="24" display="flex" justify="center" items="end" items-self="end"><div text-wrap="nowrap" mb="3em" rotate="-90">max-h="24"</div></div>
-            </div>
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="max-height-code"></syntax-highlight>
-          </div>
-        </div>
       </section>
-      <on-this-page></on-this-page>
     </div>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script type="module">
-    import '../components/syntax-highlight.js';
     import '../components/header.js';
     import '../components/side-nav.js';
-    import '../components/on-this-page.js';
-    import { heightBasicCode, minHeightCode, maxHeightCode } from '../codes/height.js';
-    const heightBasicCodeEl = document.getElementById('height-basic-code');
-    const minHeightCodeEl = document.getElementById('min-height-code');
-    const maxHeightCodeEl = document.getElementById('max-height-code');
-    maxHeightCodeEl.code = maxHeightCode;
-    heightBasicCodeEl.code = heightBasicCode;
-    minHeightCodeEl.code = minHeightCode;
   </script>
 </html>

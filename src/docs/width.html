@@ -105,103 +105,11 @@
             </tr>
           </tbody>
         </table>
-        <h3 mt="8" id="basic">basic usage</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="6">
-            <div space-y="4">
-              <div w="96" display="flex" center="flex" class="bar-h">w-96</div>
-              <div w="80" display="flex" center="flex" class="bar-h">w-80</div>
-              <div w="64" display="flex" center="flex" class="bar-h">w-64</div>
-              <div w="48" display="flex" center="flex" class="bar-h">w-48</div>
-              <div w="40" display="flex" center="flex" class="bar-h">w-40</div>
-              <div w="32" display="flex" center="flex" class="bar-h">w-40</div>
-              <div w="24" display="flex" center="flex" class="bar-h">w-24</div>
-            </div>
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="width-basic-code"></syntax-highlight>
-          </div>
-        </div>
-        <h3 mt="8" id="both-side">setting both width and height</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="8">
-            <div display="flex" gap="4">
-              <div size="16" radius="2" class="demo-box">size="16"</div>
-              <div size="20" radius="2" class="demo-box">size="20"</div>
-              <div size="24" radius="2" class="demo-box">size="24"</div>
-              <div size="32" radius="2" class="demo-box">size="32"</div>
-              <div size="40" radius="2" class="demo-box">size="40"</div>
-            </div>
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="width-size-code"></syntax-highlight>
-          </div>
-        </div>
-        <h3 mt="8" id="min-width">min-width</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="8">
-            <div w="20" class="pattern-box" py="4" translate-x="-8" space-y="2">
-              <div min-w="80" display="flex" center="flex" class="bar-h">min-w="80"</div>
-              <div min-w="64" display="flex" center="flex" class="bar-h">min-w="64"</div>
-              <div min-w="48" display="flex" center="flex" class="bar-h">min-w="48"</div>
-              <div min-w="40" display="flex" center="flex" class="bar-h">min-w="40"</div>
-              <div min-w="32" display="flex" center="flex" class="bar-h">min-w="32"</div>
-              <div min-w="24" display="flex" center="flex" class="bar-h">min-w="24"</div>
-            </div>
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="min-width-code"></syntax-highlight>
-          </div>
-        </div>
-        <h3 mt="8" id="max-width">max-width</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="8">
-            <div display="flex" gap="4" w="80%" flex-direction="column">
-              <div class="pattern-box">
-                <div max-w="96" display="flex" center="flex" class="bar-h">min-w="96"</div>
-              </div>
-              <div class="pattern-box">
-                <div max-w="80" display="flex" center="flex" class="bar-h">max-w="80"</div>
-              </div>
-              <div class="pattern-box">
-                <div max-w="64" display="flex" center="flex" class="bar-h">max-w="64"</div>
-              </div>
-              <div class="pattern-box">
-                <div max-w="48" display="flex" center="flex" class="bar-h">max-w="48"</div>
-              </div>
-              <div class="pattern-box">
-                <div max-w="40" display="flex" center="flex" class="bar-h">max-w="40"</div>
-              </div>
-              <div class="pattern-box">
-                <div max-w="32" display="flex" center="flex" class="bar-h">max-w="32"</div>
-              </div>
-              <div class="pattern-box">
-                <div max-w="24" display="flex" center="flex" class="bar-h">max-w="24"</div>
-              </div>
-            </div>
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="max-width-code"></syntax-highlight>
-          </div>
-        </div>
       </section>
-      <on-this-page></on-this-page>
     </div>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script type="module">
-    import '../components/syntax-highlight.js';
     import '../components/header.js';
     import '../components/side-nav.js';
-    import '../components/on-this-page.js';
-    import { widthBasicCode, sizeCode, minWidthCode, maxWidthCode } from '../codes/width.js';
-    const widthBasicCodeEl = document.getElementById('width-basic-code');
-    const sizeCodeEl = document.getElementById('width-size-code');
-    const minWidthCodeEl = document.getElementById('min-width-code');
-    const maxWidthCodeEl = document.getElementById('max-width-code');
-    widthBasicCodeEl.code = widthBasicCode;
-    sizeCodeEl.code = sizeCode;
-    minWidthCodeEl.code = minWidthCode;
-    maxWidthCodeEl.code = maxWidthCode;
   </script>
 </html>

@@ -35,7 +35,6 @@ class SideNav extends HTMLElement {
   }
   #render() {
     const list = this.#renderList();
-    console.log(list);
     this.shadowRoot.innerHTML = /* html */ `
       <style>
         .side-nav {

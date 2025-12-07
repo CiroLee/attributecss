@@ -40,26 +40,11 @@
             </tr>
           </tbody>
         </table>
-        <h3 mt="8" id="basic">basic usage</h3>
-        <div class="demo-code-container">
-          <div class="demo" py="4">
-            <img src="../assets/images/nature-1.webp" alt="nature" w="50%" radius="3" object="cover" aspect="video" />
-          </div>
-          <div class="code">
-            <syntax-highlight language="html" id="aspect-ratio-code"></syntax-highlight>
-          </div>
-        </div>
       </section>
-      <on-this-page></on-this-page>
     </div>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script type="module">
-    import '../components/syntax-highlight.js';
     import '../components/header.js';
     import '../components/side-nav.js';
-    import '../components/on-this-page.js';
-    const aspectRatioCodeEl = document.getElementById('aspect-ratio-code');
-    aspectRatioCodeEl.code = `<img src="../assets/images/nature-1.webp" aspect="video" alt="nature" />`;
   </script>
 </html>
