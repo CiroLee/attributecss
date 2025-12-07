@@ -1,45 +1,4 @@
 @layer components {
-  .pattern-box {
-    --line: #fbfff7;
-    --size: 10px;
-    background-image: repeating-linear-gradient(135deg, var(--line) 0, var(--line) 1px, transparent 0, transparent 50%);
-    background-size: var(--size) var(--size);
-    background-color: hsl(243 80.55% 73.11% / 80%);
-    border-radius: 8px;
-    transition: background-color 0.2s ease-in-out;
-    &:hover {
-      background-color: hsl(243 63.23% 64.98% / 80%);
-    }
-    &.padding {
-      background-color: hsl(85 65% 62% / 0.8);
-      &:hover {
-        background-color: hsl(85 62% 50% / 0.8);
-      }
-    }
-    &.margin {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: hsla(31, 65%, 62%, 0.8);
-      &:hover {
-        background-color: hsla(32, 62%, 50%, 0.8);
-      }
-    }
-    &.secondary {
-      background-color: hsl(0 0% 9% / 20%);
-      &:hover {
-        background-color: hsl(0 0% 9% / 30%);
-      }
-    }
-  }
-  .demo-box {
-    font-size: 14px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #348ff0;
-  }
   .home {
     max-width: 54%;
     margin-inline: auto;
@@ -67,44 +26,7 @@
       display: block;
     }
   }
-  .demo-code-container {
-    background-color: white;
-    border-radius: 8px;
-    border: 1px solid #eaeaea;
-    padding: 6px;
-    .demo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #ebebeb;
-      border-radius: 3px;
-      min-height: 160px;
-    }
-    .code {
-      margin-top: 8px;
-      display: block;
-      overflow: hidden;
-      border-radius: 3px;
-      box-shadow: 0 0 0 2px hsl(0deg 0% 80% / 38%);
-      padding: 14px 16px;
-      background-color: #f8f8f8;
-    }
-  }
-  .bar-h {
-    height: 30px;
-    border-radius: 8px;
-    color: white;
-    background-color: var(--primary-color);
-    font-size: 14px;
-  }
-  .bar-v {
-    width: 30px;
-    border-radius: 8px;
-    color: white;
-    text-align: justify;
-    background-color: var(--primary-color);
-    font-size: 14px;
-  }
+
   .table {
     width: 100%;
     table-layout: auto;
@@ -140,7 +62,6 @@
       font-size: 14px;
     }
   }
-  ::part(button),
   .button {
     display: inline-flex;
     align-items: center;
