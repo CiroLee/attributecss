@@ -110,3 +110,13 @@
 [box] {
   box-sizing: attr(box type(*));
 }
+
+/* visibility */
+[visibility] {
+  visibility: attr(visibility type(*));
+}
+
+/* z-index */
+[z] {
+  z-index: attr(z number);
+}
